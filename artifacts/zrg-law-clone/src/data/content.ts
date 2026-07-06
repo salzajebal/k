@@ -12,8 +12,7 @@ export const heroSlides: HeroSlide[] = [
   {
     image: "slide_worry.png",
     title: "더 이상 혼자 고민하지 마세요\n개인회생, 화민 로펌이 함께합니다",
-    description:
-      "· 전화 · 카카오톡 1:1 비대면 비밀상담\n· 압류 걱정 끝, 신속한 금지명령 조치",
+    description: "· 압류 걱정 끝, 신속한 금지명령 조치",
   },
   {
     image: "slide_easy.png",
