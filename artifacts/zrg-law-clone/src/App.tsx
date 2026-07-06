@@ -17,8 +17,8 @@ function App() {
     <div className="zrg-app">
       <Header />
       <main>
-        <Lawyers />
         <Hero />
+        <Lawyers />
         <SuccessCases />
         <YoutubeSection />
         <CtaBlock />
