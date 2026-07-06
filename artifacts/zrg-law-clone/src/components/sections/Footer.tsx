@@ -24,20 +24,6 @@ export default function Footer() {
             사업장소재지.&nbsp;{businessInfo.address}
           </span>
         </div>
-
-        <div className="zrg-footer-customer">
-          <div className="zrg-footer-social">
-            <a href="https://www.instagram.com/505_shortcut/" target="_blank" rel="noreferrer" aria-label="Instagram">
-              IG
-            </a>
-            <a href="https://blog.naver.com/luvkok" target="_blank" rel="noreferrer" aria-label="Naver Blog">
-              N
-            </a>
-            <a href="http://pf.kakao.com/_xdxiexgb/chat" target="_blank" rel="noreferrer" aria-label="Kakao">
-              K
-            </a>
-          </div>
-        </div>
       </div>
     </footer>
   );
