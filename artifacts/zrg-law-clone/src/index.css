@@ -350,8 +350,9 @@ button {
 
 .zrg-youtube-title-banner img {
   height: auto;
-  max-width: 340px;
+  max-width: 480px;
   width: 100%;
+  mix-blend-mode: multiply;
 }
 
 .zrg-youtube-body {
@@ -446,18 +447,6 @@ button {
   .zrg-youtube-body {
     grid-template-columns: 1fr;
   }
-}
-
-.zrg-youtube-subscribe {
-  display: flex;
-  justify-content: center;
-  margin-top: 32px;
-}
-
-.zrg-youtube-subscribe img {
-  max-width: 360px;
-  width: 100%;
-  height: auto;
 }
 
 /* ===================== ICON MARQUEE ===================== */

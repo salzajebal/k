@@ -11,7 +11,7 @@ export default function YoutubeSection() {
     <section className="zrg-youtube" id="youtube">
       <div className="zrg-youtube-inner">
         <div className="zrg-youtube-title zrg-youtube-title-banner">
-          <img src={img("subscribe-banner.png")} alt="로온TV 구독" />
+          <img src={img("subscribe-banner-trimmed.png")} alt="로온TV 구독" />
         </div>
 
         <div className="zrg-youtube-body">
@@ -80,10 +80,6 @@ export default function YoutubeSection() {
               </button>
             </div>
           </div>
-        </div>
-
-        <div className="zrg-youtube-subscribe">
-          <img src={img("subscribe-banner.png")} alt="로온TV 구독" />
         </div>
       </div>
     </section>
