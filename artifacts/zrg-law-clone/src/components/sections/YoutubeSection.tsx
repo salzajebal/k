@@ -10,11 +10,8 @@ export default function YoutubeSection() {
   return (
     <section className="zrg-youtube">
       <div className="zrg-youtube-inner">
-        <div className="zrg-youtube-title">
-          <h1>
-            화민 로펌 <strong>유튜브 채널</strong>
-          </h1>
-          <img src={img("main_youtube.png")} alt="유튜브검색" />
+        <div className="zrg-youtube-title zrg-youtube-title-banner">
+          <img src={img("subscribe-banner.png")} alt="로온TV 구독" />
         </div>
 
         <div className="zrg-youtube-body">

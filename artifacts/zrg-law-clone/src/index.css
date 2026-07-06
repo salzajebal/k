@@ -378,6 +378,16 @@ button {
   height: 28px;
 }
 
+.zrg-youtube-title-banner {
+  justify-content: center;
+}
+
+.zrg-youtube-title-banner img {
+  height: auto;
+  max-width: 340px;
+  width: 100%;
+}
+
 .zrg-youtube-body {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
