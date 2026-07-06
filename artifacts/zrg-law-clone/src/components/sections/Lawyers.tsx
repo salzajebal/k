@@ -4,7 +4,7 @@ const img = (name: string) => `${import.meta.env.BASE_URL}images/${name}`;
 
 export default function Lawyers() {
   return (
-    <section className="zrg-lawyers">
+    <section className="zrg-lawyers" id="lawyers">
       <div className="zrg-lawyers-inner">
         <h2 className="zrg-section-title">화민 로펌 대표변호사 소개</h2>
         <div className="zrg-lawyers-list">

@@ -495,11 +495,11 @@ export const faqItems: FaqItem[] = [
 ];
 
 export const navLinks = [
-  { label: "로펌 소개", href: "https://505zrg.com/default/about/doctor/sub2_1.php?top=1&sub=1" },
-  { label: "제로백 회생·파산", href: "https://505zrg.com/default/menu2/sub1/sub1_1.php?top=2&sub=1" },
-  { label: "의뢰인 실제후기", href: "https://505zrg.com/default/community/sub2.php?top=4&sub=2" },
-  { label: "온라인상담", href: "https://505zrg.com/default/reservation/sub2.php?top=5&sub=1" },
-  { label: "블로그", href: "https://zrg505seoul.com" },
+  { label: "대표변호사 소개", href: "#lawyers" },
+  { label: "성공사례", href: "#success-cases" },
+  { label: "유튜브", href: "#youtube" },
+  { label: "온라인상담", href: "#lead-form" },
+  { label: "자주 묻는 질문", href: "#faq" },
 ];
 
 export const businessInfo = {

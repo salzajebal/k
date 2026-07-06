@@ -18,6 +18,11 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 body {
   font-family: var(--zrg-font-kr);
   color: var(--zrg-body);

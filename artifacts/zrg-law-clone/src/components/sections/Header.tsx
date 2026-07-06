@@ -17,7 +17,7 @@ export default function Header() {
           <ul>
             {navLinks.map((link) => (
               <li key={link.label}>
-                <a href={link.href} target="_blank" rel="noreferrer">
+                <a href={link.href} onClick={() => setMenuOpen(false)}>
                   {link.label}
                 </a>
               </li>

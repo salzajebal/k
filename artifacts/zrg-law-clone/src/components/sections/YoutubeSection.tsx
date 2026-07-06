@@ -8,7 +8,7 @@ export default function YoutubeSection() {
   const total = youtubeSlideGroups.length;
 
   return (
-    <section className="zrg-youtube">
+    <section className="zrg-youtube" id="youtube">
       <div className="zrg-youtube-inner">
         <div className="zrg-youtube-title zrg-youtube-title-banner">
           <img src={img("subscribe-banner.png")} alt="로온TV 구독" />
