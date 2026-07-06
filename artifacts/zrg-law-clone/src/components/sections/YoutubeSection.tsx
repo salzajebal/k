@@ -19,7 +19,7 @@ export default function YoutubeSection() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/7r9BjpF7ft0?autoplay=1&mute=1&controls=0&loop=1&playlist=7r9BjpF7ft0"
+              src="https://www.youtube.com/embed/Vf6dkTIvirg?autoplay=1&mute=1&controls=0&loop=1&playlist=Vf6dkTIvirg"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
