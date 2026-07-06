@@ -18,8 +18,8 @@ function HomePage() {
       <main>
         <Hero />
         <Lawyers />
-        <SuccessCases />
         <YoutubeSection />
+        <SuccessCases />
         <LeadForm />
         <IconMarquee />
         <Ticker />
