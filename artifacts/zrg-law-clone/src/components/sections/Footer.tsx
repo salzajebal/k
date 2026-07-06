@@ -26,7 +26,6 @@ export default function Footer() {
         </div>
 
         <div className="zrg-footer-customer">
-          <p className="zrg-footer-call">1577.4318</p>
           <div className="zrg-footer-social">
             <a href="https://www.instagram.com/505_shortcut/" target="_blank" rel="noreferrer" aria-label="Instagram">
               IG

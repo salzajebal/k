@@ -102,52 +102,6 @@ export const marqueeIcons = Array.from({ length: 14 }, (_, i) => {
   return { image: `3d-icon-${n}.png`, alt: `mainicon${i + 1}` };
 });
 
-export interface ShortsCard {
-  url: string;
-  image: string;
-  alt: string;
-  title: string;
-  subtitle: string;
-}
-
-export const shortsCards: ShortsCard[] = [
-  {
-    url: "https://www.youtube.com/shorts/wPHIQunGbGs",
-    image: "shorts_thumb1.jpg",
-    alt: "자영업자 후기",
-    title: "창업 후 프랜차이즈에 밀린 자영업자",
-    subtitle: "'빚 탕감 상담 한 번에 마음이 편해졌습니다'",
-  },
-  {
-    url: "https://www.youtube.com/shorts/lVZMOY-pfGo",
-    image: "shorts_thumb2.jpg",
-    alt: "신속채무조정 후기",
-    title: "'이자도 전부 없애줘요'",
-    subtitle: "신속채무조정 대신 개인회생을 택한 이유",
-  },
-  {
-    url: "https://youtube.com/shorts/GGGp1nceeWs",
-    image: "shorts_thumb3.jpg",
-    alt: "40대 회사원 후기",
-    title: "가게 2번 폐업한 40대 엄마의 빚 탈출",
-    subtitle: "빚 6,000만 원 → 월 15만 원 개인회생",
-  },
-  {
-    url: "https://youtube.com/shorts/NDV1S-QMMmE",
-    image: "shorts_thumb4.jpg",
-    alt: "60대 농업인 후기",
-    title: "'이런 제도가 있는 줄 몰랐어!'",
-    subtitle: "60대 농업인 빚 4,800만 원 회생 후기",
-  },
-  {
-    url: "https://youtube.com/shorts/HA_U9hlwGjA",
-    image: "shorts_thumb5.jpg",
-    alt: "40대 직장인 후기",
-    title: "신용점수에 집착하면 안 되는 이유?",
-    subtitle: "부모님 빚 대신 갚았던 30대 직장인",
-  },
-];
-
 export interface TickerEntry {
   type: string;
   name: string;
@@ -195,19 +149,6 @@ export const tickerEntries: TickerEntry[] = rawTicker.map(([type, name, status])
   status,
   statusClass: statusClassMap[status] ?? "received",
 }));
-
-export interface Office {
-  name: string;
-  suffix: string;
-  image: string;
-  mapUrl: string;
-}
-
-export const offices: Office[] = [
-  { name: "서울", suffix: "본사", image: "office01-seoul.jpg", mapUrl: "https://naver.me/G7V4f37R" },
-  { name: "수원", suffix: "분사무소", image: "office02-suwon.jpg", mapUrl: "https://naver.me/565r8Sub" },
-  { name: "대구", suffix: "분사무소", image: "office04-daegu.jpg", mapUrl: "https://naver.me/FnmwcC3a" },
-];
 
 export const certificateImages = ["paper02.jpg", "paper03.jpg", "paper05.jpg"];
 
