@@ -1,4 +1,4 @@
-import { KAKAO_URL, PHONE, lawyers } from "@/data/content";
+import { lawyers } from "@/data/content";
 
 const img = (name: string) => `${import.meta.env.BASE_URL}images/${name}`;
 
@@ -23,17 +23,6 @@ export default function Lawyers() {
                   ))}
                 </ul>
                 <div className="zrg-lawyer-actions">
-                  <a className="zrg-lawyer-btn zrg-lawyer-btn-call" href={`tel:${PHONE}`}>
-                    📞 {PHONE}
-                  </a>
-                  <a
-                    className="zrg-lawyer-btn zrg-lawyer-btn-kakao"
-                    href={KAKAO_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    카카오톡 상담
-                  </a>
                   <a
                     className="zrg-lawyer-btn zrg-lawyer-btn-more"
                     href={lawyer.href}

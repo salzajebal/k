@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { heroSlides, KAKAO_URL, PHONE } from "@/data/content";
+import { heroSlides } from "@/data/content";
 
 const img = (name: string) => `${import.meta.env.BASE_URL}images/${name}`;
 const SLIDE_DURATION = 6000;
@@ -47,16 +47,6 @@ export default function Hero() {
                     {i === 0 && <br />}
                   </span>
                 ))}
-              </div>
-              <div className="zrg-hero-cta">
-                <a className="zrg-hero-call" href={`tel:${PHONE}`}>
-                  <img src={img("icon5-tel_02.png")} alt="전화" />
-                  {PHONE} <span>무료상담</span>
-                </a>
-                <a className="zrg-hero-kakao" href={KAKAO_URL} target="_blank" rel="noreferrer">
-                  <img src={img("icon2-zrg_02_new.png")} alt="카카오" />
-                  <span>카카오톡 무료상담</span>
-                </a>
               </div>
             </div>
           </div>

@@ -226,45 +226,6 @@ button {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.zrg-hero-cta {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.zrg-hero-call,
-.zrg-hero-kakao {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 24px;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.zrg-hero-call {
-  background: var(--zrg-green);
-  color: #fff;
-}
-
-.zrg-hero-call span {
-  font-weight: 400;
-  font-size: 13px;
-  opacity: 0.85;
-}
-
-.zrg-hero-kakao {
-  background: #fee500;
-  color: #222;
-}
-
-.zrg-hero-call img,
-.zrg-hero-kakao img {
-  width: 20px;
-  height: 20px;
-}
-
 .zrg-hero-pagin {
   position: absolute;
   right: 32px;
@@ -1123,16 +1084,6 @@ button {
   font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
-}
-
-.zrg-lawyer-btn-call {
-  background: var(--zrg-green);
-  color: #fff;
-}
-
-.zrg-lawyer-btn-kakao {
-  background: var(--zrg-yellow);
-  color: var(--zrg-dark);
 }
 
 .zrg-lawyer-btn-more {
