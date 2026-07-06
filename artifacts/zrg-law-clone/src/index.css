@@ -472,6 +472,18 @@ button {
   }
 }
 
+.zrg-youtube-subscribe {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.zrg-youtube-subscribe img {
+  max-width: 360px;
+  width: 100%;
+  height: auto;
+}
+
 /* ===================== ICON MARQUEE ===================== */
 .zrg-marquee {
   overflow: hidden;

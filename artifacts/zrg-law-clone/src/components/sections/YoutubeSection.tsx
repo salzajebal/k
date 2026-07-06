@@ -84,6 +84,10 @@ export default function YoutubeSection() {
             </div>
           </div>
         </div>
+
+        <div className="zrg-youtube-subscribe">
+          <img src={img("subscribe-banner.png")} alt="로온TV 구독" />
+        </div>
       </div>
     </section>
   );
