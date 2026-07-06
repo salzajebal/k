@@ -203,7 +203,7 @@ export const navLinks = [
 ];
 
 export const businessInfo = {
-  name: "화민",
+  name: "법률사무소 화민",
   representative: "이상혁",
   registrationNumber: "659-22-01666",
   openDate: "2023년 11월 01일",
