@@ -10,6 +10,7 @@ import SuccessCases from "@/components/sections/SuccessCases";
 import Lawyers from "@/components/sections/Lawyers";
 import Faq from "@/components/sections/Faq";
 import CtaBlock from "@/components/sections/CtaBlock";
+import LeadForm from "@/components/sections/LeadForm";
 import Footer from "@/components/sections/Footer";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <SuccessCases />
         <YoutubeSection />
         <CtaBlock />
+        <LeadForm />
         <IconMarquee />
         <ShortsSection />
         <Ticker />
