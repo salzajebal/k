@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="zrg-footer-inner">
         <div className="zrg-footer-logo">
           <a href="/">
-            <img src={img("logo-w.png")} alt="법무법인 화민" />
+            <img src={img("logo-w.png")} alt="화민" />
           </a>
         </div>
 

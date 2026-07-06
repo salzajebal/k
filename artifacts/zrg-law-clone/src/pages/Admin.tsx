@@ -225,7 +225,7 @@ function Dashboard({ adminKey, onLogout }: { adminKey: string; onLogout: () => v
   return (
     <div className="zrg-admin-dashboard">
       <header className="zrg-admin-header">
-        <h1>법무법인 화민 관리자</h1>
+        <h1>화민 관리자</h1>
         <button type="button" className="zrg-admin-logout" onClick={onLogout}>
           로그아웃
         </button>

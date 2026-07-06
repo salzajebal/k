@@ -75,7 +75,7 @@ export default function LeadForm() {
           진단받아 보세요
         </h2>
         <p className="zrg-leadform-sub">
-          간단한 정보만 남겨주시면 법무법인 화민 상담팀이 빠르게 연락드립니다.
+          간단한 정보만 남겨주시면 화민 상담팀이 빠르게 연락드립니다.
         </p>
 
         <ul className="zrg-leadform-trust">

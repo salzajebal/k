@@ -15,7 +15,7 @@ export default function SuccessCasesPage() {
             <Link href="/" className="zrg-success-back">
               ← 홈으로
             </Link>
-            <h1 className="zrg-section-title">법무법인 화민 성공사례</h1>
+            <h1 className="zrg-section-title">화민 성공사례</h1>
             <p className="zrg-success-desc">
               의뢰인의 소중한 개인정보 보호를 위해 이름, 주민등록번호 등은 모두 모자이크 처리했습니다.
             </p>

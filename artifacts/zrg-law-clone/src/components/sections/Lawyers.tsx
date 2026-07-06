@@ -7,7 +7,7 @@ export default function Lawyers() {
     <section className="zrg-lawyers" id="lawyers">
       <div className="zrg-lawyers-inner">
         <p className="zrg-lawyers-eyebrow">ATTORNEY PROFILE</p>
-        <h2 className="zrg-section-title">법무법인 화민 대표변호사 소개</h2>
+        <h2 className="zrg-section-title">화민 대표변호사 소개</h2>
         <div className="zrg-lawyers-list">
           {lawyers.map((lawyer) => (
             <div key={lawyer.name} className="zrg-lawyer-card">

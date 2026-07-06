@@ -10,7 +10,7 @@ export default function Header() {
     <header className="zrg-header">
       <div className="zrg-header-inner">
         <a href="/" className="zrg-logo">
-          <img src={img("logo.png")} alt="법무법인 화민" />
+          <img src={img("logo.png")} alt="화민" />
         </a>
 
         <nav className={`zrg-nav ${menuOpen ? "is-open" : ""}`}>
