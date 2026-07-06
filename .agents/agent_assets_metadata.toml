@@ -1,0 +1,121 @@
+uploads = []
+
+[[generated]]
+id = "sXSMvLHXadCe1W9oGACKe"
+uri = "file://artifacts/zrg-law-clone/public/images/slide_worry.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "CW9eqG0Zg3GgANy4ZwP31"
+uri = "file://artifacts/zrg-law-clone/public/images/slide_easy.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "JWQlvbF_obWs90jHVtxRe"
+uri = "file://artifacts/zrg-law-clone/public/images/slide_expert.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "QFCTKrOoreYKvH0D1fmPw"
+uri = "file://artifacts/zrg-law-clone/public/images/slide_people.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "CUwGZpbLIMqh1hLSuRK5I"
+uri = "file://artifacts/zrg-law-clone/public/images/slide_prepare.png"
+type = "image"
+title = "generated_image"
+
+[[outputs]]
+id = "UiYHCPBb73hZI5iOML7GN"
+uri = "file://attached_assets/stock_images/hero_slide_debt_worry_1.jpg"
+type = "image"
+title = "worried Korean man alone at night looking at phone, financial stress, moody dark lighting"
+
+[[outputs]]
+id = "m-I5pEbE5s8un8LLBvB0O"
+uri = "file://attached_assets/stock_images/hero_slide_debt_worry_2.jpg"
+type = "image"
+title = "worried Korean man alone at night looking at phone, financial stress, moody dark lighting"
+
+[[outputs]]
+id = "01AcRgxNE59LwT1IsM2dj"
+uri = "file://attached_assets/stock_images/hero_slide_debt_worry_3.jpg"
+type = "image"
+title = "worried Korean man alone at night looking at phone, financial stress, moody dark lighting"
+
+[[outputs]]
+id = "9ETpTHCS6WejFSEVVD7DL"
+uri = "file://attached_assets/stock_images/hero_slide_easy_mobile_diagnosis_1.jpg"
+type = "image"
+title = "person using smartphone easily filling out simple online form, comfortable home, warm lighting"
+
+[[outputs]]
+id = "oYd3wMpJ5CUpv1GsNP79_"
+uri = "file://attached_assets/stock_images/hero_slide_easy_mobile_diagnosis_2.jpg"
+type = "image"
+title = "person using smartphone easily filling out simple online form, comfortable home, warm lighting"
+
+[[outputs]]
+id = "TU83ZDnwYfRzKJjoD-44r"
+uri = "file://attached_assets/stock_images/hero_slide_easy_mobile_diagnosis_3.jpg"
+type = "image"
+title = "person using smartphone easily filling out simple online form, comfortable home, warm lighting"
+
+[[outputs]]
+id = "y6NhsGMEE1STsHjFjI73f"
+uri = "file://attached_assets/stock_images/hero_slide_expert_lawyer_1.jpg"
+type = "image"
+title = "confident professional lawyer in suit working in modern law office, dark moody tone"
+
+[[outputs]]
+id = "dGnZr3hIVCAoACCR4SRN6"
+uri = "file://attached_assets/stock_images/hero_slide_expert_lawyer_2.jpg"
+type = "image"
+title = "confident professional lawyer in suit working in modern law office, dark moody tone"
+
+[[outputs]]
+id = "WVObx1sfJ8sA_YMD-Q7jQ"
+uri = "file://attached_assets/stock_images/hero_slide_expert_lawyer_3.jpg"
+type = "image"
+title = "confident professional lawyer in suit working in modern law office, dark moody tone"
+
+[[outputs]]
+id = "SBRFsln5X1qD3tCVqXjhA"
+uri = "file://attached_assets/stock_images/hero_slide_diverse_workers_1.jpg"
+type = "image"
+title = "diverse Korean workers small business owner part time worker smiling confident, warm tone"
+
+[[outputs]]
+id = "awJuYQmyBbA4zdcPpL93b"
+uri = "file://attached_assets/stock_images/hero_slide_diverse_workers_2.jpg"
+type = "image"
+title = "diverse Korean workers small business owner part time worker smiling confident, warm tone"
+
+[[outputs]]
+id = "daKIrmeJpAdwHfiDRe7R8"
+uri = "file://attached_assets/stock_images/hero_slide_diverse_workers_3.jpg"
+type = "image"
+title = "diverse Korean workers small business owner part time worker smiling confident, warm tone"
+
+[[outputs]]
+id = "Ywaj1rGz1bRmsTRyBdVqa"
+uri = "file://attached_assets/stock_images/hero_slide_early_preparation_1.jpg"
+type = "image"
+title = "person calmly organizing documents and calendar planning ahead at desk, preparation, soft lighting"
+
+[[outputs]]
+id = "i6qLVR9rJkXPvl-3fwTNU"
+uri = "file://attached_assets/stock_images/hero_slide_early_preparation_2.jpg"
+type = "image"
+title = "person calmly organizing documents and calendar planning ahead at desk, preparation, soft lighting"
+
+[[outputs]]
+id = "PCWN0p9ZxnJ-dNnQr1viQ"
+uri = "file://attached_assets/stock_images/hero_slide_early_preparation_3.jpg"
+type = "image"
+title = "person calmly organizing documents and calendar planning ahead at desk, preparation, soft lighting"
