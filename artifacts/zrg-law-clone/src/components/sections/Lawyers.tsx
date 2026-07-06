@@ -6,7 +6,7 @@ export default function Lawyers() {
   return (
     <section className="zrg-lawyers">
       <div className="zrg-lawyers-inner">
-        <h2 className="zrg-section-title">지름길 법무법인 변호사 소개</h2>
+        <h2 className="zrg-section-title">화민 법무법인 변호사 소개</h2>
         <div className="zrg-lawyers-grid">
           {lawyers.map((lawyer) => (
             <a

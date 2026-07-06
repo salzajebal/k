@@ -8,19 +8,19 @@ export default function Footer() {
       <div className="zrg-footer-inner">
         <div className="zrg-footer-logo">
           <a href="/">
-            <img src={img("logo-w.png")} alt="법무법인 지름길" />
+            <img src={img("logo-w.png")} alt="화민 법무법인" />
           </a>
         </div>
 
         <div className="zrg-footer-info">
-          <span className="zrg-footer-title">법무법인 지름길</span>
+          <span className="zrg-footer-title">화민 법무법인</span>
           {footerOffices.map((office) => (
             <span key={office.label}>
               {office.label}&nbsp;&nbsp;|&nbsp;&nbsp;{office.address}.&nbsp;&nbsp;Tel.&nbsp;{office.tel}
               {office.email ? `\u00A0\u00A0e-mail.\u00A0${office.email}` : ""}
             </span>
           ))}
-          <span className="zrg-footer-copy">Copyrights © 2022 All Rights Reserved by ZRUMGIL.</span>
+          <span className="zrg-footer-copy">Copyrights © 2022 All Rights Reserved by HWAMIN.</span>
         </div>
 
         <div className="zrg-footer-customer">

@@ -75,7 +75,8 @@ button {
 }
 
 .zrg-logo img {
-  height: 42px;
+  height: 54px;
+  object-fit: contain;
 }
 
 .zrg-nav ul {
@@ -1242,7 +1243,8 @@ button {
 }
 
 .zrg-footer-logo img {
-  height: 30px;
+  height: 44px;
+  object-fit: contain;
 }
 
 .zrg-footer-info {

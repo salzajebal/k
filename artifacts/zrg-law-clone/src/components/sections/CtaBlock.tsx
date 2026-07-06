@@ -7,7 +7,7 @@ export default function CtaBlock() {
     <section className="zrg-cta">
       <div className="zrg-cta-inner">
         <h2>
-          지금, <strong>지름길</strong>과 함께
+          지금, <strong>화민</strong>과 함께
           <br />더 나은 내일을 시작하세요
         </h2>
         <div className="zrg-cta-boxes">
