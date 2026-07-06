@@ -23,6 +23,9 @@ export default function Footer() {
           <span>
             사업장소재지.&nbsp;{businessInfo.address}
           </span>
+          <span>
+            전화.&nbsp;{businessInfo.tel}&nbsp;&nbsp;|&nbsp;&nbsp;팩스.&nbsp;{businessInfo.fax}
+          </span>
         </div>
       </div>
     </footer>
