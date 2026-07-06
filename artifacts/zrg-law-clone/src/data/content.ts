@@ -11,12 +11,12 @@ export interface HeroSlide {
 export const heroSlides: HeroSlide[] = [
   {
     image: "slide_worry.png",
-    title: "더 이상 혼자 고민하지 마세요\n개인회생, 화민 로펌이 함께합니다",
+    title: "더 이상 혼자 고민하지 마세요\n개인회생, 법무법인 화민이 함께합니다",
     description: "· 압류 걱정 끝, 신속한 금지명령 조치",
   },
   {
     image: "slide_easy.png",
-    title: "누구나 쉽고 간편하게\n화민 로펌 솔루션으로 시작하세요",
+    title: "누구나 쉽고 간편하게\n화민 솔루션으로 시작하세요",
     description:
       "· 근무 중에도 30초 간편 무료진단!\n· 서류 발급부터 진행상황 확인까지 한 번에",
   },
