@@ -68,14 +68,30 @@ export default function LeadForm() {
   return (
     <section className="zrg-leadform" id="lead-form">
       <div className="zrg-leadform-inner">
+        <p className="zrg-leadform-eyebrow">FREE CONSULTATION</p>
         <h2>
           지금 무료로, <strong>나의 채무 상황</strong>을
           <br />
           진단받아 보세요
         </h2>
         <p className="zrg-leadform-sub">
-          간단한 정보만 남겨주시면 화민 로펌 상담팀이 빠르게 연락드립니다.
+          간단한 정보만 남겨주시면 법무법인 화민 상담팀이 빠르게 연락드립니다.
         </p>
+
+        <ul className="zrg-leadform-trust">
+          <li>
+            <span className="zrg-leadform-trust-icon">🔒</span>
+            개인정보 안전 보호
+          </li>
+          <li>
+            <span className="zrg-leadform-trust-icon">⚖️</span>
+            변호사 직접 상담
+          </li>
+          <li>
+            <span className="zrg-leadform-trust-icon">⏱</span>
+            신청 후 빠른 회신
+          </li>
+        </ul>
 
         {status === "success" ? (
           <div className="zrg-leadform-success">
@@ -84,6 +100,7 @@ export default function LeadForm() {
           </div>
         ) : (
           <form className="zrg-leadform-form" onSubmit={handleSubmit}>
+            <p className="zrg-leadform-form-title">무료 진단 신청서</p>
             <div className="zrg-leadform-row">
               <label>
                 이름 <span className="req">*</span>

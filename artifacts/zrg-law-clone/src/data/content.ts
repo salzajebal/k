@@ -172,14 +172,26 @@ export interface Lawyer {
   title: string;
   image: string;
   quote: string;
+  intro: string;
+  specialties: string[];
+  career: string[];
 }
 
 export const lawyers: Lawyer[] = [
   {
     name: "이상혁 대표변호사",
-    title: "화민 로펌 대표변호사 · 사법연수원 42기",
+    title: "법무법인 화민 대표변호사 · 사법연수원 42기",
     image: "lawyer-rep.png",
     quote: "의뢰인의 상황을 제 일처럼 살펴, 가장 확실한 해결책을 찾아드립니다.",
+    intro:
+      "채무 문제는 혼자 감당하기 버거운 일입니다. 법무법인 화민 이상혁 대표변호사는 개인회생·개인파산·신용회복 사건을 중심으로, 의뢰인이 다시 일상으로 돌아갈 수 있도록 처음 상담부터 사건 종결까지 직접 챙깁니다. 서류 준비의 어려움부터 법원 절차의 부담까지, 전 과정을 명확하게 안내해드립니다.",
+    specialties: ["개인회생", "개인파산·면책", "신용회복지원", "채무조정 상담"],
+    career: [
+      "사법연수원 42기 수료",
+      "개인회생·개인파산 사건 다수 수행",
+      "채무자 눈높이에 맞춘 1:1 맞춤 상담 진행",
+      "법원 제출서류 작성부터 사건 종결까지 원스톱 대응",
+    ],
   },
 ];
 

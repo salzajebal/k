@@ -786,6 +786,16 @@ button {
   margin: 0 auto;
 }
 
+.zrg-lawyers-eyebrow {
+  font-family: var(--zrg-font-en);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--zrg-gold);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .zrg-lawyers-list {
   display: flex;
   flex-direction: column;
@@ -794,12 +804,13 @@ button {
 
 .zrg-lawyer-card {
   display: grid;
-  grid-template-columns: 340px 1fr;
+  grid-template-columns: 360px 1fr;
   gap: 0;
   background: #fff;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ececea;
 }
 
 .zrg-lawyer-photo {
@@ -824,7 +835,7 @@ button {
 }
 
 .zrg-lawyer-info {
-  padding: 40px 44px;
+  padding: 44px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -842,17 +853,69 @@ button {
   font-size: 30px;
   font-weight: 800;
   color: var(--zrg-dark);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+}
+
+.zrg-lawyer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.zrg-lawyer-tag {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--zrg-green);
+  background: rgba(35, 97, 14, 0.08);
+  border: 1px solid rgba(35, 97, 14, 0.18);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
+.zrg-lawyer-intro {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--zrg-body);
+  margin-bottom: 20px;
 }
 
 .zrg-lawyer-quote {
   font-size: 17px;
-  color: var(--zrg-body);
+  color: var(--zrg-dark);
+  font-weight: 600;
   line-height: 1.7;
   padding: 18px 22px;
   background: #f7f8f6;
   border-left: 3px solid var(--zrg-green);
   border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.zrg-lawyer-career {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #ececea;
+  padding-top: 20px;
+}
+
+.zrg-lawyer-career li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14.5px;
+  color: var(--zrg-body);
+  line-height: 1.5;
+}
+
+.zrg-lawyer-career li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--zrg-green);
+  font-weight: 800;
+  font-size: 13px;
 }
 
 @media (max-width: 800px) {
@@ -871,6 +934,10 @@ button {
   .zrg-lawyer-info {
     padding: 28px 24px;
   }
+
+  .zrg-lawyer-name {
+    font-size: 26px;
+  }
 }
 
 /* ===================== LEAD FORM ===================== */
@@ -883,6 +950,15 @@ button {
   max-width: 720px;
   margin: 0 auto;
   text-align: center;
+}
+
+.zrg-leadform-eyebrow {
+  font-family: var(--zrg-font-en);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--zrg-gold);
+  margin-bottom: 10px;
 }
 
 .zrg-leadform-inner h2 {
@@ -902,14 +978,50 @@ button {
   color: var(--zrg-body);
 }
 
+.zrg-leadform-trust {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+  list-style: none;
+  padding: 0;
+}
+
+.zrg-leadform-trust li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--zrg-dark);
+  background: #fff;
+  border: 1px solid #e5e7e0;
+  border-radius: 999px;
+  padding: 8px 16px;
+}
+
+.zrg-leadform-trust-icon {
+  font-size: 14px;
+}
+
 .zrg-leadform-form {
-  margin-top: 32px;
+  margin-top: 28px;
   background: #fff;
   border: 1px solid #e5e7e0;
   border-radius: 20px;
-  padding: 36px 28px;
+  padding: 40px 36px;
   text-align: left;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+}
+
+.zrg-leadform-form-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--zrg-dark);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--zrg-green);
 }
 
 .zrg-leadform-row {
@@ -1039,8 +1151,21 @@ button {
     padding: 50px 16px;
   }
 
+  .zrg-leadform-trust {
+    gap: 8px;
+  }
+
+  .zrg-leadform-trust li {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
   .zrg-leadform-form {
     padding: 28px 20px;
+  }
+
+  .zrg-leadform-form-title {
+    font-size: 16px;
   }
 
   .zrg-leadform-success {
