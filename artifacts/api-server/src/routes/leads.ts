@@ -1,6 +1,6 @@
 import { Router, type IRouter } from "express";
 import { desc } from "drizzle-orm";
-import { db, leadsTable } from "@workspace/db";
+import { db, leadsTable, appSettingsTable } from "@workspace/db";
 import {
   CreateLeadBody,
   CreateLeadResponse,
@@ -18,8 +18,9 @@ async function notifyTelegram(lead: {
   assets?: string | null;
   income?: string | null;
 }): Promise<void> {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_CHAT_ID;
+  const [settings] = await db.select().from(appSettingsTable).limit(1);
+  const token = settings?.telegramBotToken;
+  const chatId = settings?.telegramChatId;
   if (!token || !chatId) return;
 
   const lines = [

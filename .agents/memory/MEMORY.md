@@ -1,1 +1,2 @@
 - [Stale Vite dep cache causes false "Invalid hook call" errors](vite-stale-deps-hook-error.md) — clear node_modules/.vite and restart workflow before debugging a hook-call crash that only affects one new component.
+- [Telegram bot group chat auto-detection](telegram-bot-group-autodetect.md) — use getUpdates to find the group chat id; requires bot invited + one message sent first.

@@ -1,7 +1,6 @@
 import { useState, type FormEvent } from "react";
+import { useCreateLead } from "@workspace/api-client-react";
 import { PHONE } from "@/data/content";
-
-const GAS_URL = import.meta.env.VITE_LEAD_FORM_SCRIPT_URL as string | undefined;
 
 interface FormState {
   name: string;
@@ -28,12 +27,13 @@ type Status = "idle" | "submitting" | "success" | "error";
 export default function LeadForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [status, setStatus] = useState<Status>("idle");
+  const createLead = useCreateLead();
 
   const update = (key: keyof FormState, value: string | boolean) => {
     setForm((prev) => ({ ...prev, [key]: value }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
     if (!form.name.trim() || !form.phone.trim() || !form.consent) {
@@ -41,32 +41,28 @@ export default function LeadForm() {
       return;
     }
 
-    if (!GAS_URL) {
-      setStatus("error");
-      return;
-    }
-
     setStatus("submitting");
-    try {
-      const body = new URLSearchParams({
-        name: form.name,
-        phone: form.phone,
-        creditDebt: form.creditDebt,
-        securedDebt: form.securedDebt,
-        assets: form.assets,
-        income: form.income,
-        submittedAt: new Date().toISOString(),
-      });
-      await fetch(GAS_URL, {
-        method: "POST",
-        mode: "no-cors",
-        body,
-      });
-      setStatus("success");
-      setForm(initialState);
-    } catch {
-      setStatus("error");
-    }
+    createLead.mutate(
+      {
+        data: {
+          name: form.name,
+          phone: form.phone,
+          creditDebt: form.creditDebt || null,
+          securedDebt: form.securedDebt || null,
+          assets: form.assets || null,
+          income: form.income || null,
+        },
+      },
+      {
+        onSuccess: () => {
+          setStatus("success");
+          setForm(initialState);
+        },
+        onError: () => {
+          setStatus("error");
+        },
+      },
+    );
   };
 
   return (

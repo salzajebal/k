@@ -12,6 +12,8 @@ tags:
     description: Health operations
   - name: leads
     description: Consultation lead operations
+  - name: admin
+    description: Admin authentication and settings
 paths:
   /healthz:
     get:
@@ -69,6 +71,100 @@ paths:
                   $ref: "#/components/schemas/Lead"
         "401":
           description: Unauthorized
+  /admin/login:
+    post:
+      operationId: adminLogin
+      tags: [admin]
+      summary: Admin login
+      description: Verifies admin username/password credentials
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AdminLoginInput"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AdminLoginResult"
+        "401":
+          description: Unauthorized
+  /admin/settings:
+    get:
+      operationId: getAdminSettings
+      tags: [admin]
+      summary: Get admin settings
+      description: Returns Telegram notification settings, requires the X-Admin-Key header
+      parameters:
+        - name: X-Admin-Key
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AdminSettings"
+        "401":
+          description: Unauthorized
+    put:
+      operationId: updateAdminSettings
+      tags: [admin]
+      summary: Update admin settings
+      description: Updates Telegram notification settings, requires the X-Admin-Key header
+      parameters:
+        - name: X-Admin-Key
+          in: header
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AdminSettingsUpdate"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AdminSettings"
+        "401":
+          description: Unauthorized
+  /admin/settings/detect-telegram-chat:
+    post:
+      operationId: detectTelegramChat
+      tags: [admin]
+      summary: Auto-detect Telegram group chat
+      description: >-
+        Uses the saved Telegram bot token to look up recent updates and automatically
+        detect the group chat the bot has been added to. Saves the detected chat id
+        and title to settings. Requires the X-Admin-Key header.
+      parameters:
+        - name: X-Admin-Key
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AdminSettings"
+        "400":
+          description: No bot token saved, or no group chat could be detected
+        "401":
+          description: Unauthorized
 components:
   schemas:
     HealthStatus:
@@ -123,4 +219,41 @@ components:
         - name
         - phone
         - createdAt
+    AdminLoginInput:
+      type: object
+      properties:
+        username:
+          type: string
+          minLength: 1
+        password:
+          type: string
+          minLength: 1
+      required:
+        - username
+        - password
+    AdminLoginResult:
+      type: object
+      properties:
+        ok:
+          type: boolean
+      required:
+        - ok
+    AdminSettings:
+      type: object
+      properties:
+        telegramBotToken:
+          type: ["string", "null"]
+        telegramChatId:
+          type: ["string", "null"]
+        telegramChatTitle:
+          type: ["string", "null"]
+      required:
+        - telegramBotToken
+        - telegramChatId
+        - telegramChatTitle
+    AdminSettingsUpdate:
+      type: object
+      properties:
+        telegramBotToken:
+          type: ["string", "null"]
 

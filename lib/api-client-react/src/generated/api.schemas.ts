@@ -39,3 +39,28 @@ export interface Lead {
   createdAt: string;
 }
 
+export interface AdminLoginInput {
+  /** @minLength 1 */
+  username: string;
+  /** @minLength 1 */
+  password: string;
+}
+
+export interface AdminLoginResult {
+  ok: boolean;
+}
+
+export interface AdminSettings {
+  /** @nullable */
+  telegramBotToken: string | null;
+  /** @nullable */
+  telegramChatId: string | null;
+  /** @nullable */
+  telegramChatTitle: string | null;
+}
+
+export interface AdminSettingsUpdate {
+  /** @nullable */
+  telegramBotToken?: string | null;
+}
+

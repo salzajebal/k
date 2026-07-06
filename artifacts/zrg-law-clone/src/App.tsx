@@ -1,3 +1,4 @@
+import { Route, Switch } from "wouter";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import YoutubeSection from "@/components/sections/YoutubeSection";
@@ -7,8 +8,9 @@ import SuccessCases from "@/components/sections/SuccessCases";
 import Lawyers from "@/components/sections/Lawyers";
 import LeadForm from "@/components/sections/LeadForm";
 import Footer from "@/components/sections/Footer";
+import AdminPage from "@/pages/Admin";
 
-function App() {
+function HomePage() {
   return (
     <div className="zrg-app">
       <Header />
@@ -23,6 +25,15 @@ function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Switch>
+      <Route path="/admin" component={AdminPage} />
+      <Route component={HomePage} />
+    </Switch>
   );
 }
 

@@ -67,3 +67,70 @@ export const ListLeadsResponseItem = zod.object({
 export const ListLeadsResponse = zod.array(ListLeadsResponseItem)
 
 
+/**
+ * Verifies admin username/password credentials
+ * @summary Admin login
+ */
+
+
+
+
+export const AdminLoginBody = zod.object({
+  "username": zod.string().min(1),
+  "password": zod.string().min(1)
+})
+
+export const AdminLoginResponse = zod.object({
+  "ok": zod.boolean()
+})
+
+
+/**
+ * Returns Telegram notification settings, requires the X-Admin-Key header
+ * @summary Get admin settings
+ */
+export const GetAdminSettingsHeader = zod.object({
+  "X-Admin-Key": zod.string()
+})
+
+export const GetAdminSettingsResponse = zod.object({
+  "telegramBotToken": zod.string().nullable(),
+  "telegramChatId": zod.string().nullable(),
+  "telegramChatTitle": zod.string().nullable()
+})
+
+
+/**
+ * Updates Telegram notification settings, requires the X-Admin-Key header
+ * @summary Update admin settings
+ */
+export const UpdateAdminSettingsHeader = zod.object({
+  "X-Admin-Key": zod.string()
+})
+
+export const UpdateAdminSettingsBody = zod.object({
+  "telegramBotToken": zod.string().nullish()
+})
+
+export const UpdateAdminSettingsResponse = zod.object({
+  "telegramBotToken": zod.string().nullable(),
+  "telegramChatId": zod.string().nullable(),
+  "telegramChatTitle": zod.string().nullable()
+})
+
+
+/**
+ * Uses the saved Telegram bot token to look up recent updates and automatically detect the group chat the bot has been added to. Saves the detected chat id and title to settings. Requires the X-Admin-Key header.
+ * @summary Auto-detect Telegram group chat
+ */
+export const DetectTelegramChatHeader = zod.object({
+  "X-Admin-Key": zod.string()
+})
+
+export const DetectTelegramChatResponse = zod.object({
+  "telegramBotToken": zod.string().nullable(),
+  "telegramChatId": zod.string().nullable(),
+  "telegramChatTitle": zod.string().nullable()
+})
+
+
