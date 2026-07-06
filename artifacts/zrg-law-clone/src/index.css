@@ -626,6 +626,17 @@ button {
   gap: 20px;
 }
 
+.zrg-success-grid-preview {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 28px;
+}
+
+.zrg-success-grid-page {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .zrg-success-card {
   display: block;
   text-align: center;
@@ -664,7 +675,9 @@ button {
   margin-top: 36px;
 }
 
-.zrg-success-more button {
+.zrg-success-more button,
+.zrg-success-more a {
+  display: inline-block;
   padding: 12px 32px;
   border-radius: 24px;
   border: 1px solid #ddd;
@@ -673,22 +686,51 @@ button {
   font-weight: 600;
   color: var(--zrg-dark);
   cursor: pointer;
+  text-decoration: none;
 }
 
-.zrg-success-more button:hover {
+.zrg-success-more button:hover,
+.zrg-success-more a:hover {
   background: var(--zrg-green);
   color: #fff;
   border-color: var(--zrg-green);
+}
+
+.zrg-success-back {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  text-decoration: none;
+}
+
+.zrg-success-back:hover {
+  color: var(--zrg-green);
 }
 
 @media (max-width: 900px) {
   .zrg-success-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .zrg-success-grid-preview {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 600px) {
   .zrg-success-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .zrg-success-grid-preview {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+
+  .zrg-success-grid-page {
     grid-template-columns: repeat(2, 1fr);
   }
 }

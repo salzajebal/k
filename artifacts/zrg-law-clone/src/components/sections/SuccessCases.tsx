@@ -1,14 +1,12 @@
-import { useState } from "react";
+import { Link } from "wouter";
 import { successCases } from "@/data/content";
 
 const img = (name: string) => `${import.meta.env.BASE_URL}images/${name}`;
 
-const PAGE_SIZE = 10;
+const PREVIEW_COUNT = 6;
 
 export default function SuccessCases() {
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-  const visibleCases = successCases.slice(0, visibleCount);
-  const hasMore = visibleCount < successCases.length;
+  const previewCases = successCases.slice(0, PREVIEW_COUNT);
 
   return (
     <section className="zrg-success" id="success-cases">
@@ -17,8 +15,8 @@ export default function SuccessCases() {
         <p className="zrg-success-desc">
           의뢰인의 소중한 개인정보 보호를 위해 이름, 주민등록번호 등은 모두 모자이크 처리했습니다.
         </p>
-        <div className="zrg-success-grid">
-          {visibleCases.map((item, idx) => (
+        <div className="zrg-success-grid zrg-success-grid-preview">
+          {previewCases.map((item, idx) => (
             <a
               key={item.image}
               className="zrg-success-card"
@@ -33,13 +31,9 @@ export default function SuccessCases() {
             </a>
           ))}
         </div>
-        {hasMore && (
-          <div className="zrg-success-more">
-            <button type="button" onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}>
-              더보기
-            </button>
-          </div>
-        )}
+        <div className="zrg-success-more">
+          <Link href="/success-cases">전체 성공사례 보기</Link>
+        </div>
       </div>
     </section>
   );

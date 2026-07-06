@@ -9,6 +9,7 @@ import Lawyers from "@/components/sections/Lawyers";
 import LeadForm from "@/components/sections/LeadForm";
 import Footer from "@/components/sections/Footer";
 import AdminPage from "@/pages/Admin";
+import SuccessCasesPage from "@/pages/SuccessCasesPage";
 
 function HomePage() {
   return (
@@ -32,6 +33,7 @@ function App() {
   return (
     <Switch>
       <Route path="/admin" component={AdminPage} />
+      <Route path="/success-cases" component={SuccessCasesPage} />
       <Route component={HomePage} />
     </Switch>
   );
