@@ -13,9 +13,9 @@ export default function SuccessCases() {
   return (
     <section className="zrg-success" id="success-cases">
       <div className="zrg-success-inner">
-        <h2 className="zrg-section-title">화민 법무법인 성공사례</h2>
+        <h2 className="zrg-section-title">화민 로펌 성공사례</h2>
         <p className="zrg-success-desc">
-          의뢰인의 개인정보 보호를 위해 성명, 주민등록번호 등은 모두 모자이크 처리하였습니다.
+          의뢰인의 소중한 개인정보 보호를 위해 이름, 주민등록번호 등은 모두 모자이크 처리했습니다.
         </p>
         <div className="zrg-success-grid">
           {visibleCases.map((item, idx) => (

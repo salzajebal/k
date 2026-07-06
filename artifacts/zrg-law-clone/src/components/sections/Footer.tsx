@@ -8,12 +8,12 @@ export default function Footer() {
       <div className="zrg-footer-inner">
         <div className="zrg-footer-logo">
           <a href="/">
-            <img src={img("logo-w.png")} alt="화민 법무법인" />
+            <img src={img("logo-w.png")} alt="화민 로펌" />
           </a>
         </div>
 
         <div className="zrg-footer-info">
-          <span className="zrg-footer-title">화민 법무법인</span>
+          <span className="zrg-footer-title">화민 로펌</span>
           <span>
             상호.&nbsp;{businessInfo.name}&nbsp;&nbsp;|&nbsp;&nbsp;대표.&nbsp;{businessInfo.representative}
             &nbsp;&nbsp;|&nbsp;&nbsp;사업자등록번호.&nbsp;{businessInfo.registrationNumber}

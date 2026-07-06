@@ -7,9 +7,9 @@ export default function Ticker() {
     <section className="zrg-ticker">
       <div className="zrg-ticker-inner">
         <div className="zrg-ticker-left">
-          <div className="zrg-ticker-title1">실시간 간편진단 접수현황</div>
+          <div className="zrg-ticker-title1">실시간 상담 접수 현황</div>
           <div className="zrg-ticker-title2">
-            일 평균 상담건수 <b>87</b>
+            하루 평균 상담 건수 <b>87</b>
             <span>건</span>
           </div>
           <div className="zrg-ticker-title3">

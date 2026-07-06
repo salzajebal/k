@@ -25,7 +25,7 @@ export default function ShortsSection() {
   return (
     <section className="zrg-shorts">
       <div className="zrg-shorts-inner">
-        <div className="zrg-shorts-heading">의뢰인 실제 후기</div>
+        <div className="zrg-shorts-heading">의뢰인들의 생생한 후기</div>
 
         <div className="zrg-shorts-wrap">
           <div className="zrg-shorts-track">

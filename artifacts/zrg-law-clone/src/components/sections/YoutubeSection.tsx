@@ -12,7 +12,7 @@ export default function YoutubeSection() {
       <div className="zrg-youtube-inner">
         <div className="zrg-youtube-title">
           <h1>
-            화민 법무법인의 <strong>유튜브</strong>
+            화민 로펌 <strong>유튜브 채널</strong>
           </h1>
           <img src={img("main_youtube.png")} alt="유튜브검색" />
         </div>

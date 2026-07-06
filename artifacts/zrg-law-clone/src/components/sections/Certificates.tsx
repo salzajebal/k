@@ -14,7 +14,7 @@ export default function Certificates() {
   return (
     <section className="zrg-certs">
       <div className="zrg-certs-inner">
-        <h2 className="zrg-section-title">화민 법무법인 인증서</h2>
+        <h2 className="zrg-section-title">화민 로펌이 보유한 인증서</h2>
         <div className="zrg-certs-carousel">
           <button type="button" className="zrg-certs-arrow left" onClick={() => move(-1)} aria-label="이전">
             ‹

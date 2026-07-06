@@ -11,32 +11,32 @@ export interface HeroSlide {
 export const heroSlides: HeroSlide[] = [
   {
     image: "slide_02.jpg",
-    title: "아무도 모르게 개인회생\n가능할까요?",
+    title: "혼자 끙끙 앓지 마세요\n개인회생, 답이 있습니다",
     description:
-      "· 비대면(전화 · 카카오톡) 1:1 비밀상담\n· 신속한 금지명령 · 추심대리인제도",
+      "· 전화 · 카카오톡 1:1 비대면 비밀상담\n· 압류 걱정 끝, 신속한 금지명령 조치",
   },
   {
     image: "slide_01.jpg",
-    title: "편안함을 제공하는\n화민 솔루션",
+    title: "부담 없이 시작하는\n화민 로펌 솔루션",
     description:
-      "· 영업중, 근무중에도 간편 무료진단으로!\n· 30가지 이상의 각종 서류 및 증명서 자체발급",
+      "· 근무 중에도 30초 간편 무료진단!\n· 서류 발급부터 진행상황 확인까지 한 번에",
   },
   {
     image: "slide_03.png",
-    title: "제로백 회생·파산\n14년 경력의 노하우",
+    title: "14년 노하우가 만든\n제로백 회생·파산",
     description:
-      "· 도산전문변호사의 사건 관리\n· 사건 기각 시 해결책 제공 · 사건관리 책임",
+      "· 도산전문변호사가 사건을 직접 관리\n· 기각 걱정 없는 책임 관리 시스템",
   },
   {
     image: "slide_04.jpg",
-    title: "비용걱정 ZERO!\n화민으로 가는 法",
+    title: "수임료 부담은 낮추고\n해결책은 확실하게",
     description:
-      "· 일용직, 알바, 주부, 자영업도 지속적인 소득있다면 OK!\n· 분납결제 등 다양한 수임료 납부방식",
+      "· 일용직 · 알바 · 주부 · 자영업도 소득만 있으면 신청 OK!\n· 형편에 맞춘 분납 등 유연한 수임료 방식",
   },
   {
     image: "slide_05.jpg",
-    title: "연체 전인데\n회생신청 가능할까요?",
-    description: "· 6개월 이내 최근대출이 있어도 OK!\n· 이자 100% 전액 탕감",
+    title: "아직 연체 전이라도\n지금 준비할 수 있어요",
+    description: "· 최근 6개월 내 대출이 있어도 신청 가능\n· 이자 전액 탕감까지 노려보세요",
   },
 ];
 
@@ -402,7 +402,7 @@ export const faqItems: FaqItem[] = [
       '<li><span class="check">✔</span><strong>파산신청자격</strong>: 채무 초과(자산 &lt; 부채) + 수입으로 상환 불가 상태</li>' +
       '<li><span class="check">✔</span>기초생활수급자, 무직자도 개인파산 신청 가능</li>' +
       '<li><span class="check">✔</span>개인회생파산 중 어느 것이 유리한지 무료 비교 상담 가능</li></ul>' +
-      "파산신청하는 곳을 찾고 계신다면 화민 법무법인에서 전국 상담을 제공합니다.",
+      "파산신청하는 곳을 찾고 계신다면 화민 로펌에서 전국 어디서나 상담받으실 수 있습니다.",
     cta: [{ label: "📞 파산 무료 상담", href: "tel:1577-4318" }],
   },
   {
@@ -485,7 +485,7 @@ export const faqItems: FaqItem[] = [
       "<li>④ 법원 심사 후 개시결정 및 채권자 집회</li>" +
       "<li>⑤ 인가 결정 → 변제 시작 (3~5년)</li>" +
       "<li>⑥ 면책 결정 → 잔여 채무 소멸</li></ul>" +
-      "<strong>개인회생 사건번호 조회</strong>는 대법원 전자소송 사이트 또는 신용정보원에서 가능하며, 담당 사무원이 진행 상황을 직접 조회·안내해드립니다.<br><br>개인프리워크아웃(연체 90일 미만)이나 개인워크아웃조건에 해당하는 경우 신용회복위원회뿐만 아니라, 화민 법무법인에서도 나에게 유리한 채무조정제도가 무엇인지 비교해보실 수 있습니다.",
+      "<strong>개인회생 사건번호 조회</strong>는 대법원 전자소송 사이트 또는 신용정보원에서 가능하며, 담당 사무원이 진행 상황을 직접 조회·안내해드립니다.<br><br>개인프리워크아웃(연체 90일 미만)이나 개인워크아웃조건에 해당하는 경우 신용회복위원회뿐만 아니라, 화민 로펌에서도 나에게 맞는 채무조정제도를 비교해보실 수 있습니다.",
     cta: [
       { label: "📞 절차 무료 안내", href: "tel:1577-4318" },
       { label: "💬 카카오 상담", href: KAKAO_URL, kakao: true },
@@ -505,7 +505,7 @@ export const faqItems: FaqItem[] = [
 ];
 
 export const navLinks = [
-  { label: "법무법인 소개", href: "https://505zrg.com/default/about/doctor/sub2_1.php?top=1&sub=1" },
+  { label: "로펌 소개", href: "https://505zrg.com/default/about/doctor/sub2_1.php?top=1&sub=1" },
   { label: "제로백 회생·파산", href: "https://505zrg.com/default/menu2/sub1/sub1_1.php?top=2&sub=1" },
   { label: "의뢰인 실제후기", href: "https://505zrg.com/default/community/sub2.php?top=4&sub=2" },
   { label: "온라인상담", href: "https://505zrg.com/default/reservation/sub2.php?top=5&sub=1" },
