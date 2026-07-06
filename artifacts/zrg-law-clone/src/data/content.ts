@@ -234,6 +234,22 @@ export const offices: Office[] = [
 
 export const certificateImages = ["paper02.jpg", "paper03.jpg", "paper05.jpg"];
 
+export interface SuccessCase {
+  image: string;
+  label: string;
+}
+
+export const successCases: SuccessCase[] = [
+  ...Array.from({ length: 20 }, (_, i) => ({
+    image: `success/success-${i + 1}.jpg`,
+    label: "개인회생 개시결정문",
+  })),
+  ...Array.from({ length: 5 }, (_, i) => ({
+    image: `success/success-${i + 21}.jpg`,
+    label: "파산면책결정문",
+  })),
+];
+
 export interface Lawyer {
   name: string;
   image: string;

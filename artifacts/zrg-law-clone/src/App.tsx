@@ -6,6 +6,7 @@ import ShortsSection from "@/components/sections/ShortsSection";
 import Ticker from "@/components/sections/Ticker";
 import OfficeBand from "@/components/sections/OfficeBand";
 import Certificates from "@/components/sections/Certificates";
+import SuccessCases from "@/components/sections/SuccessCases";
 import Lawyers from "@/components/sections/Lawyers";
 import Faq from "@/components/sections/Faq";
 import CtaBlock from "@/components/sections/CtaBlock";
@@ -23,6 +24,7 @@ function App() {
         <Ticker />
         <OfficeBand />
         <Certificates />
+        <SuccessCases />
         <Lawyers />
         <Faq />
         <CtaBlock />
