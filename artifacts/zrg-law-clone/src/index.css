@@ -866,69 +866,6 @@ button {
   }
 }
 
-/* ===================== CTA BLOCK ===================== */
-.zrg-cta {
-  padding: 80px 24px;
-  background: #1b3d13;
-  color: #fff;
-}
-
-.zrg-cta-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.zrg-cta-inner h2 {
-  font-size: clamp(24px, 3.4vw, 36px);
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 40px;
-}
-
-.zrg-cta-inner strong {
-  color: #ffe503;
-}
-
-.zrg-cta-boxes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.zrg-cta-box {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  padding: 32px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.zrg-cta-box:hover {
-  background: rgba(255, 255, 255, 0.16);
-  transform: translateY(-4px);
-}
-
-.zrg-cta-box img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 4px;
-}
-
-.zrg-cta-box span {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.zrg-cta-box p {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
 /* ===================== LEAD FORM ===================== */
 .zrg-leadform {
   padding: 80px 24px;
