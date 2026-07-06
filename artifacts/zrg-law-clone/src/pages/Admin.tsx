@@ -65,43 +65,74 @@ function LoginForm({ onLoggedIn }: { onLoggedIn: (key: string) => void }) {
   );
 }
 
+const LEADS_PER_PAGE = 10;
+
 function LeadsTable({ adminKey }: { adminKey: string }) {
   const { data: leads, isLoading, isError } = useListLeads({
     request: { headers: { "X-Admin-Key": adminKey } },
   });
+  const [page, setPage] = useState(1);
 
   if (isLoading) return <p>불러오는 중...</p>;
   if (isError) return <p className="zrg-admin-error">목록을 불러오지 못했습니다.</p>;
   if (!leads || leads.length === 0) return <p>접수된 상담 신청이 없습니다.</p>;
 
+  const totalPages = Math.max(1, Math.ceil(leads.length / LEADS_PER_PAGE));
+  const currentPage = Math.min(page, totalPages);
+  const start = (currentPage - 1) * LEADS_PER_PAGE;
+  const pageLeads = leads.slice(start, start + LEADS_PER_PAGE);
+
   return (
-    <div className="zrg-admin-table-wrap">
-      <table className="zrg-admin-table">
-        <thead>
-          <tr>
-            <th>접수일시</th>
-            <th>이름</th>
-            <th>전화번호</th>
-            <th>신용채무</th>
-            <th>담보채무</th>
-            <th>재산</th>
-            <th>월소득</th>
-          </tr>
-        </thead>
-        <tbody>
-          {leads.map((lead) => (
-            <tr key={lead.id}>
-              <td>{new Date(lead.createdAt).toLocaleString("ko-KR")}</td>
-              <td>{lead.name}</td>
-              <td>{lead.phone}</td>
-              <td>{lead.creditDebt ?? "-"}</td>
-              <td>{lead.securedDebt ?? "-"}</td>
-              <td>{lead.assets ?? "-"}</td>
-              <td>{lead.income ?? "-"}</td>
+    <div>
+      <div className="zrg-admin-table-wrap">
+        <table className="zrg-admin-table">
+          <thead>
+            <tr>
+              <th>접수일시</th>
+              <th>이름</th>
+              <th>전화번호</th>
+              <th>신용채무</th>
+              <th>담보채무</th>
+              <th>재산</th>
+              <th>월소득</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {pageLeads.map((lead) => (
+              <tr key={lead.id}>
+                <td>{new Date(lead.createdAt).toLocaleString("ko-KR")}</td>
+                <td>{lead.name}</td>
+                <td>{lead.phone}</td>
+                <td>{lead.creditDebt ?? "-"}</td>
+                <td>{lead.securedDebt ?? "-"}</td>
+                <td>{lead.assets ?? "-"}</td>
+                <td>{lead.income ?? "-"}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {totalPages > 1 && (
+        <div className="zrg-admin-pagination">
+          <button
+            type="button"
+            onClick={() => setPage((p) => Math.max(1, p - 1))}
+            disabled={currentPage === 1}
+          >
+            이전
+          </button>
+          <span className="zrg-admin-pagination-info">
+            {currentPage} / {totalPages}
+          </span>
+          <button
+            type="button"
+            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+            disabled={currentPage === totalPages}
+          >
+            다음
+          </button>
+        </div>
+      )}
     </div>
   );
 }
