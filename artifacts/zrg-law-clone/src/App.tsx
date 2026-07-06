@@ -5,7 +5,6 @@ import IconMarquee from "@/components/sections/IconMarquee";
 import ShortsSection from "@/components/sections/ShortsSection";
 import Ticker from "@/components/sections/Ticker";
 import OfficeBand from "@/components/sections/OfficeBand";
-import Certificates from "@/components/sections/Certificates";
 import SuccessCases from "@/components/sections/SuccessCases";
 import Lawyers from "@/components/sections/Lawyers";
 import Faq from "@/components/sections/Faq";
@@ -28,7 +27,6 @@ function App() {
         <ShortsSection />
         <Ticker />
         <OfficeBand />
-        <Certificates />
         <Faq />
       </main>
       <Footer />
