@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { navLinks, PHONE } from "@/data/content";
+import { navLinks } from "@/data/content";
 
 const img = (name: string) => `${import.meta.env.BASE_URL}images/${name}`;
 
@@ -24,13 +24,6 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-
-        <div className="zrg-header-cta">
-          <a className="zrg-header-call" href={`tel:${PHONE}`}>
-            <img src={img("icon5-tel_02.png")} alt="전화상담" />
-            <span>{PHONE}</span>
-          </a>
-        </div>
 
         <button
           type="button"

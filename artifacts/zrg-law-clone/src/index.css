@@ -100,25 +100,6 @@ button {
   color: var(--zrg-green);
 }
 
-.zrg-header-call {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--zrg-green);
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 24px;
-  font-weight: 700;
-  font-size: 15px;
-  white-space: nowrap;
-}
-
-.zrg-header-call img {
-  width: 18px;
-  height: 18px;
-  filter: brightness(0) invert(1);
-}
-
 .zrg-menu-toggle {
   display: none;
   flex-direction: column;
@@ -158,9 +139,6 @@ button {
     display: block;
     padding: 12px 0;
     border-bottom: 1px solid #eee;
-  }
-  .zrg-header-cta span {
-    display: none;
   }
   .zrg-menu-toggle {
     display: flex;
