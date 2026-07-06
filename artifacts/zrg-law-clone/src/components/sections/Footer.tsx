@@ -13,16 +13,16 @@ export default function Footer() {
         </div>
 
         <div className="zrg-footer-info">
-          <span className="zrg-footer-title">화민 로펌</span>
           <span>
             상호.&nbsp;{businessInfo.name}&nbsp;&nbsp;|&nbsp;&nbsp;대표.&nbsp;{businessInfo.representative}
             &nbsp;&nbsp;|&nbsp;&nbsp;사업자등록번호.&nbsp;{businessInfo.registrationNumber}
           </span>
           <span>
-            {businessInfo.address}.&nbsp;&nbsp;Tel.&nbsp;{businessInfo.tel}
-            &nbsp;&nbsp;e-mail.&nbsp;{businessInfo.email}
+            개업연월일.&nbsp;{businessInfo.openDate}
           </span>
-          <span className="zrg-footer-copy">Copyrights © 2022 All Rights Reserved by HWAMIN.</span>
+          <span>
+            사업장소재지.&nbsp;{businessInfo.address}
+          </span>
         </div>
 
         <div className="zrg-footer-customer">

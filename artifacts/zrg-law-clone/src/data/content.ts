@@ -205,7 +205,6 @@ export const businessInfo = {
   name: "법률사무소 화민",
   representative: "이상혁",
   registrationNumber: "659-22-01666",
+  openDate: "2023년 11월 01일",
   address: "경기도 고양시 일산동구 중앙로 1197, 601호(장항동)",
-  tel: "1577-4318",
-  email: "505zrg@naver.com",
 };
