@@ -33,7 +33,7 @@ export default function YoutubeSection() {
               {youtubeSlideGroups[group].map((video) => (
                 <li key={video.seq}>
                   <a href={video.href} target="_blank" rel="noreferrer">
-                    <img src={img(video.image)} alt="유튜브썸네일" />
+                    <img src={video.image} alt="유튜브썸네일" />
                   </a>
                   <div className="zrg-youtube-txt">
                     <h1>{video.title}</h1>
