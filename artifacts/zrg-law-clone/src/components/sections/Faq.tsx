@@ -1,38 +1,16 @@
-import { useMemo, useState } from "react";
-import { faqCategories, faqItems } from "@/data/content";
+import { useState } from "react";
+import { faqItems } from "@/data/content";
 
 export default function Faq() {
-  const [category, setCategory] = useState("all");
   const [openIndex, setOpenIndex] = useState<number | null>(1);
-
-  const filtered = useMemo(() => {
-    if (category === "all") return faqItems;
-    return faqItems.filter((item) => item.cats.includes(category));
-  }, [category]);
 
   return (
     <section className="zrg-faq" id="faq">
       <div className="zrg-faq-inner">
         <h2 className="zrg-section-title">궁금한 점이 있으신가요?</h2>
 
-        <div className="zrg-faq-cats">
-          {faqCategories.map((cat) => (
-            <button
-              key={cat.key}
-              type="button"
-              className={category === cat.key ? "is-active" : ""}
-              onClick={() => {
-                setCategory(cat.key);
-                setOpenIndex(null);
-              }}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
-
         <div className="zrg-faq-list">
-          {filtered.map((item, idx) => {
+          {faqItems.map((item, idx) => {
             const isOpen = openIndex === idx;
             return (
               <div className={`zrg-faq-item ${isOpen ? "is-open" : ""}`} key={item.question}>
