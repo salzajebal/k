@@ -1,4 +1,4 @@
-import { footerOffices } from "@/data/content";
+import { businessInfo } from "@/data/content";
 
 const img = (name: string) => `${import.meta.env.BASE_URL}images/${name}`;
 
@@ -14,12 +14,14 @@ export default function Footer() {
 
         <div className="zrg-footer-info">
           <span className="zrg-footer-title">화민 법무법인</span>
-          {footerOffices.map((office) => (
-            <span key={office.label}>
-              {office.label}&nbsp;&nbsp;|&nbsp;&nbsp;{office.address}.&nbsp;&nbsp;Tel.&nbsp;{office.tel}
-              {office.email ? `\u00A0\u00A0e-mail.\u00A0${office.email}` : ""}
-            </span>
-          ))}
+          <span>
+            상호.&nbsp;{businessInfo.name}&nbsp;&nbsp;|&nbsp;&nbsp;대표.&nbsp;{businessInfo.representative}
+            &nbsp;&nbsp;|&nbsp;&nbsp;사업자등록번호.&nbsp;{businessInfo.registrationNumber}
+          </span>
+          <span>
+            {businessInfo.address}.&nbsp;&nbsp;Tel.&nbsp;{businessInfo.tel}
+            &nbsp;&nbsp;e-mail.&nbsp;{businessInfo.email}
+          </span>
           <span className="zrg-footer-copy">Copyrights © 2022 All Rights Reserved by HWAMIN.</span>
         </div>
 

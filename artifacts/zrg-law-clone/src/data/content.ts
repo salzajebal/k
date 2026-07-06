@@ -242,23 +242,8 @@ export interface Lawyer {
 
 export const lawyers: Lawyer[] = [
   {
-    name: "이동우 대표변호사",
-    image: "lawyer1.jpg",
-    href: "https://505zrg.com/default/about/doctor/sub2_1.php?top=1&sub=2",
-  },
-  {
-    name: "차애리 변호사",
-    image: "lawyer6.jpg",
-    href: "https://505zrg.com/default/about/doctor/sub2_1.php?top=1&sub=2",
-  },
-  {
-    name: "김동창 변호사",
-    image: "lawyer7.jpg",
-    href: "https://505zrg.com/default/about/doctor/sub2_1.php?top=1&sub=2",
-  },
-  {
-    name: "구영관 변호사",
-    image: "lawyer3.jpg",
+    name: "이상혁 대표변호사",
+    image: "lawyer-rep.png",
     href: "https://505zrg.com/default/about/doctor/sub2_1.php?top=1&sub=2",
   },
 ];
@@ -511,21 +496,11 @@ export const navLinks = [
   { label: "블로그", href: "https://zrg505seoul.com" },
 ];
 
-export const footerOffices = [
-  {
-    label: "서울주사무소",
-    address: "서울특별시 서초구 서초중앙로 147, 3층(서초법조타운)",
-    tel: "1577-4318",
-    email: "505zrg@naver.com",
-  },
-  {
-    label: "수원분사무소",
-    address: "경기도 화성시 동탄구 동탄반석로 171 2층 207호",
-    tel: "1660-2585",
-  },
-  {
-    label: "대구분사무소",
-    address: "대구광역시 수성구 동대구로 334 6층",
-    tel: "053-716-8482",
-  },
-];
+export const businessInfo = {
+  name: "법률사무소 화민",
+  representative: "이상혁",
+  registrationNumber: "659-22-01666",
+  address: "경기도 고양시 일산동구 중앙로 1197, 601호(장항동)",
+  tel: "1577-4318",
+  email: "505zrg@naver.com",
+};

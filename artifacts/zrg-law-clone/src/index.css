@@ -971,6 +971,11 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  justify-content: center;
+}
+
+.zrg-lawyers-grid:has(> :only-child) {
+  grid-template-columns: minmax(0, 280px);
 }
 
 .zrg-lawyer-card {
