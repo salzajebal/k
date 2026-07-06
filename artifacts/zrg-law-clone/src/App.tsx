@@ -17,17 +17,17 @@ function App() {
     <div className="zrg-app">
       <Header />
       <main>
+        <Lawyers />
         <Hero />
+        <SuccessCases />
         <YoutubeSection />
+        <CtaBlock />
         <IconMarquee />
         <ShortsSection />
         <Ticker />
         <OfficeBand />
         <Certificates />
-        <SuccessCases />
-        <Lawyers />
         <Faq />
-        <CtaBlock />
       </main>
       <Footer />
     </div>
