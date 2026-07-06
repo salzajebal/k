@@ -207,7 +207,7 @@ export const businessInfo = {
   representative: "이상혁",
   registrationNumber: "659-22-01666",
   openDate: "2023년 11월 01일",
-  address: "경기도 고양시 일산동구 중앙로 1197, 601호(장항동)",
+  address: "경기도 고양시 일산동구 중앙로 1197, 801호(장항동)",
   tel: "031-994-8731",
   fax: "031-994-8732",
 };
