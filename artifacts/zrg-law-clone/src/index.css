@@ -155,6 +155,13 @@ button {
   background: #111;
 }
 
+@media (max-width: 600px) {
+  .zrg-hero {
+    height: min(70vh, 620px);
+    min-height: 460px;
+  }
+}
+
 .zrg-hero-slides {
   position: relative;
   width: 100%;
@@ -427,6 +434,26 @@ button {
   }
 }
 
+@media (max-width: 480px) {
+  .zrg-youtube {
+    padding: 50px 16px;
+  }
+
+  .zrg-youtube-list a {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 60px;
+  }
+
+  .zrg-youtube-txt h1 {
+    font-size: 13.5px;
+  }
+
+  .zrg-youtube-txt span {
+    font-size: 11.5px;
+  }
+}
+
 /* ===================== ICON MARQUEE ===================== */
 .zrg-marquee {
   overflow: hidden;
@@ -590,6 +617,19 @@ button {
 @media (max-width: 800px) {
   .zrg-ticker-inner {
     grid-template-columns: 1fr;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .zrg-ticker-row {
+    font-size: 12.5px;
+    padding: 8px 4px;
+  }
+
+  .zrg-ticker-status {
+    font-size: 11px;
+    padding: 3px 8px;
   }
 }
 
@@ -994,6 +1034,20 @@ button {
   }
 }
 
+@media (max-width: 480px) {
+  .zrg-leadform {
+    padding: 50px 16px;
+  }
+
+  .zrg-leadform-form {
+    padding: 28px 20px;
+  }
+
+  .zrg-leadform-success {
+    padding: 36px 20px;
+  }
+}
+
 @media (max-width: 700px) {
   .zrg-cta-boxes {
     grid-template-columns: 1fr;
@@ -1272,7 +1326,28 @@ button {
   .zrg-footer-customer {
     text-align: center;
   }
-  .zrg-footer-social {
-    justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .zrg-footer {
+    padding: 32px 16px;
+  }
+
+  .zrg-footer-info {
+    font-size: 11.5px;
+  }
+
+  .zrg-admin-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .zrg-admin-content {
+    padding: 16px;
+  }
+
+  .zrg-admin-tabs button {
+    padding: 8px 14px;
+    font-size: 13px;
   }
 }
