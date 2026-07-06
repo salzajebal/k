@@ -5,9 +5,6 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
 
 export interface LeadInput {
   /** @minLength 1 */
@@ -23,19 +20,3 @@ export interface LeadInput {
   /** @nullable */
   income?: string | null;
 }
-
-export interface Lead {
-  id: number;
-  name: string;
-  phone: string;
-  /** @nullable */
-  creditDebt?: string | null;
-  /** @nullable */
-  securedDebt?: string | null;
-  /** @nullable */
-  assets?: string | null;
-  /** @nullable */
-  income?: string | null;
-  createdAt: string;
-}
-

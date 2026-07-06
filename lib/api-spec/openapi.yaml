@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: leads
+    description: Consultation lead operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,49 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /leads:
+    post:
+      operationId: createLead
+      tags: [leads]
+      summary: Submit a consultation lead
+      description: Public endpoint used by the lead form to submit a new consultation request
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LeadInput"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Lead"
+        "400":
+          description: Invalid input
+    get:
+      operationId: listLeads
+      tags: [leads]
+      summary: List consultation leads
+      description: Admin-only endpoint that returns all submitted leads, requires the X-Admin-Key header
+      parameters:
+        - name: X-Admin-Key
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Lead"
+        "401":
+          description: Unauthorized
 components:
   schemas:
     HealthStatus:
@@ -33,4 +78,49 @@ components:
           type: string
       required:
         - status
+    LeadInput:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 1
+        phone:
+          type: string
+          minLength: 1
+        creditDebt:
+          type: ["string", "null"]
+        securedDebt:
+          type: ["string", "null"]
+        assets:
+          type: ["string", "null"]
+        income:
+          type: ["string", "null"]
+      required:
+        - name
+        - phone
+    Lead:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        phone:
+          type: string
+        creditDebt:
+          type: ["string", "null"]
+        securedDebt:
+          type: ["string", "null"]
+        assets:
+          type: ["string", "null"]
+        income:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - name
+        - phone
+        - createdAt
 
