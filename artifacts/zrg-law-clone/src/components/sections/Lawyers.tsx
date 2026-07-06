@@ -17,21 +17,6 @@ export default function Lawyers() {
                 <p className="zrg-lawyer-title">{lawyer.title}</p>
                 <h3 className="zrg-lawyer-name">{lawyer.name}</h3>
                 <p className="zrg-lawyer-quote">“{lawyer.quote}”</p>
-                <ul className="zrg-lawyer-highlights">
-                  {lawyer.highlights.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                <div className="zrg-lawyer-actions">
-                  <a
-                    className="zrg-lawyer-btn zrg-lawyer-btn-more"
-                    href={lawyer.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    프로필 자세히 보기
-                  </a>
-                </div>
               </div>
             </div>
           ))}

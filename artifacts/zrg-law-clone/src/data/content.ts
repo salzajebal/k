@@ -171,9 +171,7 @@ export interface Lawyer {
   name: string;
   title: string;
   image: string;
-  href: string;
   quote: string;
-  highlights: string[];
 }
 
 export const lawyers: Lawyer[] = [
@@ -181,16 +179,7 @@ export const lawyers: Lawyer[] = [
     name: "이상혁 대표변호사",
     title: "화민 로펌 대표변호사 · 사법연수원 42기",
     image: "lawyer-rep.png",
-    href: "https://505zrg.com/default/about/doctor/sub2_1.php?top=1&sub=2",
     quote: "의뢰인의 상황을 제 일처럼 살펴, 가장 확실한 해결책을 찾아드립니다.",
-    highlights: [
-      "사법연수원 42기 수료",
-      "전주지방검찰청 군산지청 검사직무대리",
-      "전주지방법원 법원실무수습",
-      "아우디코리아 공식수입원 태안모터스 법률고문",
-      "대한치과의사협회 법률지원 변호사",
-      "저서 「ACCENT 민법」 (문성출판)",
-    ],
   },
 ];
 
