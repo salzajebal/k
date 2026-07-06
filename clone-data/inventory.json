@@ -1,0 +1,559 @@
+{
+  "sections": [
+    {
+      "tag": "DIV",
+      "id": "header",
+      "classes": "headroom headroom--top headroom--not-bottom",
+      "textPreview": "법무법인 소개\n \n제로백 회생·파산\n \n의뢰인 실제후기\n \n온라인상담\n \n블로그"
+    },
+    {
+      "tag": "DIV",
+      "id": "",
+      "classes": "bcel_menu",
+      "textPreview": "\n        \n            \n            \n            \n            \n        \n        \n            \n                ZRUMGIL LAW FIRM\n                \n       "
+    },
+    {
+      "tag": "LINK",
+      "id": "",
+      "classes": "",
+      "textPreview": ""
+    },
+    {
+      "tag": "SCRIPT",
+      "id": "",
+      "classes": "",
+      "textPreview": ""
+    },
+    {
+      "tag": "LINK",
+      "id": "",
+      "classes": "",
+      "textPreview": ""
+    },
+    {
+      "tag": "SCRIPT",
+      "id": "",
+      "classes": "",
+      "textPreview": ""
+    },
+    {
+      "tag": "DIV",
+      "id": "container",
+      "classes": "",
+      "textPreview": "아무도 모르게 개인회생\n가능할까요?\n· 비대면(전화 · 카카오톡) 1:1 비밀상담\n· 신속한 금지명령 · 추심대리인제도\n1577-4318 무료상담\n카카오톡 무료상담\n편안함을 제공하는\n지름길 솔루션\n· 영업중, 근무중에도 간편 무료진단으로!\n· 30가지 이상의 각종 서류"
+    },
+    {
+      "tag": "SCRIPT",
+      "id": "",
+      "classes": "",
+      "textPreview": "\n(function() {\n  // ① #count null 오류 방지 (14.77%)\n  if (!document.getElementById('count')) {\n    var dummy = document.createElement('div');\n    dummy.i"
+    },
+    {
+      "tag": "DIV",
+      "id": "",
+      "classes": "section section6",
+      "textPreview": " \n법무법인 지름길\n\n\n서울주사무소   |   서울특별시 서초구 서초중앙로 147, 3층(서초법조타운).    Tel.  1577-4318   e-mail.  505zrg@naver.com\n수원분사무소   |   경기도 화성시 동탄구 동탄반석로 171 2층 207호. "
+    }
+  ],
+  "images": [
+    {
+      "src": "https://505zrg.com/default/img/popup.jpg",
+      "alt": "이동우 대표변호사",
+      "w": 1200,
+      "h": 1200
+    },
+    {
+      "src": "https://505zrg.com/default/img/logo.png",
+      "alt": "Logo",
+      "w": 185,
+      "h": 30
+    },
+    {
+      "src": "https://505zrg.com/default/img/logom.png",
+      "alt": "Logo",
+      "w": 450,
+      "h": 66
+    },
+    {
+      "src": "https://505zrg.com/default/img/logo-w.png",
+      "alt": "Logo",
+      "w": 185,
+      "h": 30
+    },
+    {
+      "src": "https://505zrg.com/default/img/logom-w.png",
+      "alt": "Logo",
+      "w": 700,
+      "h": 110
+    },
+    {
+      "src": "https://505zrg.com/default/img/hblock/design/img/icon5-tel_02.png",
+      "alt": "",
+      "w": 209,
+      "h": 209
+    },
+    {
+      "src": "https://505zrg.com/default/img/hblock/design/img/icon2-zrg_02_new.png",
+      "alt": "",
+      "w": 209,
+      "h": 209
+    },
+    {
+      "src": "https://505zrg.com/default/img/hblock/design/img/icon5-tel_02.png",
+      "alt": "",
+      "w": 209,
+      "h": 209
+    },
+    {
+      "src": "https://505zrg.com/default/img/hblock/design/img/icon2-zrg_02_new.png",
+      "alt": "",
+      "w": 209,
+      "h": 209
+    },
+    {
+      "src": "https://505zrg.com/default/img/hblock/design/img/icon5-tel_02.png",
+      "alt": "",
+      "w": 209,
+      "h": 209
+    },
+    {
+      "src": "https://505zrg.com/default/img/hblock/design/img/icon2-zrg_02_new.png",
+      "alt": "",
+      "w": 209,
+      "h": 209
+    },
+    {
+      "src": "https://505zrg.com/default/img/hblock/design/img/icon5-tel_02.png",
+      "alt": "",
+      "w": 209,
+      "h": 209
+    },
+    {
+      "src": "https://505zrg.com/default/img/hblock/design/img/icon2-zrg_02_new.png",
+      "alt": "",
+      "w": 209,
+      "h": 209
+    },
+    {
+      "src": "https://505zrg.com/default/img/hblock/design/img/icon5-tel_02.png",
+      "alt": "",
+      "w": 209,
+      "h": 209
+    },
+    {
+      "src": "https://505zrg.com/default/img/hblock/design/img/icon2-zrg_02_new.png",
+      "alt": "",
+      "w": 209,
+      "h": 209
+    },
+    {
+      "src": "https://505zrg.com/default/img/main_youtube.png",
+      "alt": "유튜브검색",
+      "w": 400,
+      "h": 41
+    },
+    {
+      "src": "https://505zrg.com/default/img/main_youtube_img1.jpg",
+      "alt": "유튜브썸네일",
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "src": "https://505zrg.com/default/img/main_youtube_img2.png",
+      "alt": "유튜브썸네일",
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "src": "https://505zrg.com/default/img/main_youtube_img3.png",
+      "alt": "유튜브썸네일",
+      "w": 1277,
+      "h": 717
+    },
+    {
+      "src": "https://505zrg.com/default/img/main_youtube_img4.jpg",
+      "alt": "유튜브썸네일",
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "src": "https://505zrg.com/default/img/main_youtube_img5.png",
+      "alt": "유튜브썸네일",
+      "w": 1279,
+      "h": 717
+    },
+    {
+      "src": "https://505zrg.com/default/img/main_youtube_img6.jpg",
+      "alt": "유튜브썸네일",
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "src": "https://505zrg.com/default/img/main_youtube_img7.jpg",
+      "alt": "유튜브썸네일",
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "src": "https://505zrg.com/default/img/main_youtube_img8.jpg",
+      "alt": "유튜브썸네일",
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "src": "https://505zrg.com/default/img/main_youtube_img9.png",
+      "alt": "유튜브썸네일",
+      "w": 1277,
+      "h": 719
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-01.png",
+      "alt": "mainicon1",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-02.png",
+      "alt": "mainicon2",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-03.png",
+      "alt": "mainicon3",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-04.png",
+      "alt": "mainicon4",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-05.png",
+      "alt": "mainicon5",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-06.png",
+      "alt": "mainicon6",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-07.png",
+      "alt": "mainicon7",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-08.png",
+      "alt": "mainicon8",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-09.png",
+      "alt": "mainicon9",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-10.png",
+      "alt": "mainicon10",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-11.png",
+      "alt": "mainicon11",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-12.png",
+      "alt": "mainicon12",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-13.png",
+      "alt": "mainicon13",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-14.png",
+      "alt": "mainicon14",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-01.png",
+      "alt": "mainicon1",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-02.png",
+      "alt": "mainicon2",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-03.png",
+      "alt": "mainicon3",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-04.png",
+      "alt": "mainicon4",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-05.png",
+      "alt": "mainicon5",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-06.png",
+      "alt": "mainicon6",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-07.png",
+      "alt": "mainicon7",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-08.png",
+      "alt": "mainicon8",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-09.png",
+      "alt": "mainicon9",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-10.png",
+      "alt": "mainicon10",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-11.png",
+      "alt": "mainicon11",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-12.png",
+      "alt": "mainicon12",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-13.png",
+      "alt": "mainicon13",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/3d-icon-14.png",
+      "alt": "mainicon14",
+      "w": 400,
+      "h": 400
+    },
+    {
+      "src": "https://505zrg.com/default/img/shorts_thumb1.jpg",
+      "alt": "자영업자 후기",
+      "w": 400,
+      "h": 720
+    },
+    {
+      "src": "https://505zrg.com/default/img/shorts_thumb2.jpg",
+      "alt": "신속채무조정 후기",
+      "w": 400,
+      "h": 720
+    },
+    {
+      "src": "https://505zrg.com/default/img/shorts_thumb3.jpg",
+      "alt": "40대 회사원 후기",
+      "w": 400,
+      "h": 720
+    },
+    {
+      "src": "https://505zrg.com/default/img/shorts_thumb4.jpg",
+      "alt": "60대 농업인 후기",
+      "w": 400,
+      "h": 720
+    },
+    {
+      "src": "https://505zrg.com/default/img/shorts_thumb5.jpg",
+      "alt": "40대 직장인 후기",
+      "w": 400,
+      "h": 720
+    },
+    {
+      "src": "https://505zrg.com/default/img/teltime.png",
+      "alt": "teltime",
+      "w": 424,
+      "h": 83
+    },
+    {
+      "src": "https://505zrg.com/default/img/paper02.jpg",
+      "alt": "증서",
+      "w": 571,
+      "h": 810
+    },
+    {
+      "src": "https://505zrg.com/default/img/paper03.jpg",
+      "alt": "증서",
+      "w": 571,
+      "h": 810
+    },
+    {
+      "src": "https://505zrg.com/default/img/paper05.jpg",
+      "alt": "증서",
+      "w": 571,
+      "h": 810
+    },
+    {
+      "src": "https://505zrg.com/default/img/paper02.jpg",
+      "alt": "증서",
+      "w": 571,
+      "h": 810
+    },
+    {
+      "src": "https://505zrg.com/default/img/paper03.jpg",
+      "alt": "증서",
+      "w": 571,
+      "h": 810
+    },
+    {
+      "src": "https://505zrg.com/default/img/paper05.jpg",
+      "alt": "증서",
+      "w": 571,
+      "h": 810
+    },
+    {
+      "src": "https://505zrg.com/default/img/paper02.jpg",
+      "alt": "증서",
+      "w": 571,
+      "h": 810
+    },
+    {
+      "src": "https://505zrg.com/default/img/paper03.jpg",
+      "alt": "증서",
+      "w": 571,
+      "h": 810
+    },
+    {
+      "src": "https://505zrg.com/default/img/paper05.jpg",
+      "alt": "증서",
+      "w": 571,
+      "h": 810
+    },
+    {
+      "src": "https://505zrg.com/default/img/lawyer6.jpg",
+      "alt": "차애리변호사",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "src": "https://505zrg.com/default/img/lawyer7.jpg",
+      "alt": "김동창변호사",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "src": "https://505zrg.com/default/img/lawyer3.jpg",
+      "alt": "구영관변호사",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "src": "https://505zrg.com/default/img/lawyer1.jpg",
+      "alt": "이동우대표변호사",
+      "w": 380,
+      "h": 520
+    },
+    {
+      "src": "https://505zrg.com/default/img/lawyer6.jpg",
+      "alt": "차애리변호사",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "src": "https://505zrg.com/default/img/lawyer7.jpg",
+      "alt": "김동창변호사",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "src": "https://505zrg.com/default/img/lawyer3.jpg",
+      "alt": "구영관변호사",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "src": "https://505zrg.com/default/img/lawyer1.jpg",
+      "alt": "이동우대표변호사",
+      "w": 380,
+      "h": 520
+    },
+    {
+      "src": "https://505zrg.com/default/img/lawyer6.jpg",
+      "alt": "차애리변호사",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "src": "https://505zrg.com/default/img/lawyer7.jpg",
+      "alt": "김동창변호사",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "src": "https://505zrg.com/default/img/icon15-zrg.png",
+      "alt": "",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "src": "https://505zrg.com/default/img/qr-zrg.png",
+      "alt": "",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "src": "https://505zrg.com/default/img/logo-w.png",
+      "alt": "",
+      "w": 185,
+      "h": 30
+    }
+  ],
+  "gnb": [
+    "법무법인 소개",
+    "제로백 회생·파산",
+    "의뢰인 실제후기",
+    "온라인상담",
+    "블로그"
+  ],
+  "footerText": " \n법무법인 지름길\n\n\n서울주사무소   |   서울특별시 서초구 서초중앙로 147, 3층(서초법조타운).    Tel.  1577-4318   e-mail.  505zrg@naver.com\n수원분사무소   |   경기도 화성시 동탄구 동탄반석로 171 2층 207호.    Tel.  1660-2585\n대구분사무소   |   대구광역시 수성구 동대구로 334 6층.    Tel.  053-716-8482 \n\n\nCopyrights © 2022 All Rights Reserved by ZRUMGIL.\n \n\n1577.4318\n\n  ",
+  "footerHTML": "\n    <div class=\"inner\">\n    <!-- 그리드 감싸기 -->\n        <div class=\"foot_wrap\">\n         <div class=\"foot_logo\"><a href=\"/default\"><img src=\"/default/img/logo-w.png\"></a></div>\n            <div class=\"foot_info\">\n             <div class=\"ft_address\">\n                 <span class=\"ft_tit\">법무법인 지름길</span>\n<br>\n<span>서울주사무소   |   서울특별시 서초구 서초중앙로 147, 3층(서초법조타운).    Tel.  1577-4318   e-mail.  505zrg@naver.com</span>\n<span>수원분사무소   |   경기도 화성시 동탄구 동탄반석로 171 2층 207호.    Tel.  1660-2585</span>\n<span>대구분사무소   |   대구광역시 수성구 동대구로 334 6층.    Tel.  053-716-8482 </span>\n                    <br>\n                 <span>Copyrights © 2022 All Rights Reserved by ZRUMGIL.</span>\n               </div>\n            </div>\n            <div class=\"foot_customer\">\n             <p class=\"footer_call\">1577.4318</p>\n                  <!-- <p>평일 09:00 ~ 18:00 / 주말 공휴일 휴무</p> -->\n                <span>\n                 <a href=\"https://www.instagram.com/505_shortcut/\" target=\"_blank\"><i class=\"xi-instagram\"></i></a>\n                    <!-- <a href=\"#;\"><i class=\"xi-facebook\"></i></a>\n                    <a href=\"#;\"><i class=\"xi-twitter\"></i></a> -->\n                    <a href=\"https://blog.naver.com/luvkok\" target=\"_blank\"><i class=\"xi-naver\"></i></a>\n                    <a href=\"http://pf.kakao.com/_xdxiexgb/chat\" target=\"_blank\"><i class=\"xi-kakaotalk\"></i></a>\n                </span>\n            </div>\n        </div>\n    <!-- // 그리드 감싸기 -->\n    </div>\n",
+  "logoSrc": "https://505zrg.com/default/img/logo.png",
+  "headerBg": {
+    "backgroundColor": "rgba(0, 0, 0, 0)"
+  }
+}

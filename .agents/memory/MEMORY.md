@@ -1,0 +1,1 @@
+- [Stale Vite dep cache causes false "Invalid hook call" errors](vite-stale-deps-hook-error.md) — clear node_modules/.vite and restart workflow before debugging a hook-call crash that only affects one new component.

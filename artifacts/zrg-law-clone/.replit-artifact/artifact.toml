@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "지름길 법무법인"
+version = "1.0.0"
+id = "artifacts/zrg-law-clone"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18683
+
+[services.development]
+run = "pnpm --filter @workspace/zrg-law-clone run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/zrg-law-clone", "run", "build" ]
+publicDir = "artifacts/zrg-law-clone/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18683"
+BASE_PATH = "/"
