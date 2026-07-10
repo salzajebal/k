@@ -26,7 +26,9 @@ import type {
   AdminSettingsUpdate,
   HealthStatus,
   Lead,
-  LeadInput
+  LeadInput,
+  Stats,
+  TrackPageViewInput
 } from './api.schemas';
 
 import { customFetch } from '../custom-fetch';
@@ -573,4 +575,153 @@ export const useDetectTelegramChat = <TError = ErrorType<void>,
       > => {
       return useMutation(getDetectTelegramChatMutationOptions(options));
     }
+
+export const getTrackPageViewUrl = () => {
+
+
+
+
+  return `/api/track`
+}
+
+/**
+ * Public endpoint called once per visitor session to record a page view for visitor statistics. Duplicate calls for the same session are ignored.
+ * @summary Record a page view
+ */
+export const trackPageView = async (trackPageViewInput: TrackPageViewInput, options?: RequestInit): Promise<void> => {
+
+  return customFetch<void>(getTrackPageViewUrl(),
+  {
+    ...options,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...options?.headers },
+    body: JSON.stringify(trackPageViewInput)
+  }
+);}
+
+
+
+
+export const getTrackPageViewMutationOptions = <TError = ErrorType<unknown>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof trackPageView>>, TError,{data: BodyType<TrackPageViewInput>}, TContext>, request?: SecondParameter<typeof customFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof trackPageView>>, TError,{data: BodyType<TrackPageViewInput>}, TContext> => {
+
+const mutationKey = ['trackPageView'];
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof trackPageView>>, {data: BodyType<TrackPageViewInput>}> = (props) => {
+          const {data} = props ?? {};
+
+          return  trackPageView(data,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type TrackPageViewMutationResult = NonNullable<Awaited<ReturnType<typeof trackPageView>>>
+    export type TrackPageViewMutationBody = BodyType<TrackPageViewInput>
+    export type TrackPageViewMutationError = ErrorType<unknown>
+
+    /**
+ * @summary Record a page view
+ */
+export const useTrackPageView = <TError = ErrorType<unknown>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof trackPageView>>, TError,{data: BodyType<TrackPageViewInput>}, TContext>, request?: SecondParameter<typeof customFetch>}
+ ): UseMutationResult<
+        Awaited<ReturnType<typeof trackPageView>>,
+        TError,
+        {data: BodyType<TrackPageViewInput>},
+        TContext
+      > => {
+      return useMutation(getTrackPageViewMutationOptions(options));
+    }
+
+export const getGetStatsUrl = () => {
+
+
+
+
+  return `/api/stats`
+}
+
+/**
+ * Admin-only endpoint returning visitor counts, requires the X-Admin-Key header
+ * @summary Get visitor statistics
+ */
+export const getStats = async ( options?: RequestInit): Promise<Stats> => {
+
+  return customFetch<Stats>(getGetStatsUrl(),
+  {
+    ...options,
+    method: 'GET'
+
+
+  }
+);}
+
+
+
+
+
+export const getGetStatsQueryKey = () => {
+    return [
+    `/api/stats`
+    ] as const;
+    }
+
+
+export const getGetStatsQueryOptions = <TData = Awaited<ReturnType<typeof getStats>>, TError = ErrorType<void>>( options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getStats>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+) => {
+
+const {query: queryOptions, request: requestOptions} = options ?? {};
+
+  const queryKey =  queryOptions?.queryKey ?? getGetStatsQueryKey();
+
+
+
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof getStats>>> = ({ signal }) => getStats({ signal, ...requestOptions });
+
+
+
+
+
+   return  { queryKey, queryFn, ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof getStats>>, TError, TData> & { queryKey: QueryKey }
+}
+
+export type GetStatsQueryResult = NonNullable<Awaited<ReturnType<typeof getStats>>>
+export type GetStatsQueryError = ErrorType<void>
+
+
+/**
+ * @summary Get visitor statistics
+ */
+
+export function useGetStats<TData = Awaited<ReturnType<typeof getStats>>, TError = ErrorType<void>>(
+  options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getStats>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+
+ ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+
+  const queryOptions = getGetStatsQueryOptions(options)
+
+  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
+
+  return withQueryKey(query, queryOptions.queryKey);
+}
+
+
+
+
+
+
 

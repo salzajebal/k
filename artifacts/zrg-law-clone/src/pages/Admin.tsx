@@ -5,6 +5,7 @@ import {
   useGetAdminSettings,
   useUpdateAdminSettings,
   useDetectTelegramChat,
+  useGetStats,
 } from "@workspace/api-client-react";
 
 const STORAGE_KEY = "zrg-admin-key";
@@ -219,8 +220,81 @@ function TelegramSettings({ adminKey }: { adminKey: string }) {
   );
 }
 
+function StatCard({ label, value, sub }: { label: string; value: number; sub?: string }) {
+  return (
+    <div className="zrg-admin-stat-card">
+      <p className="zrg-admin-stat-label">{label}</p>
+      <p className="zrg-admin-stat-value">{value.toLocaleString("ko-KR")}</p>
+      {sub && <p className="zrg-admin-stat-sub">{sub}</p>}
+    </div>
+  );
+}
+
+function VisitorStats({ adminKey }: { adminKey: string }) {
+  const { data: stats, isLoading, isError } = useGetStats({
+    request: { headers: { "X-Admin-Key": adminKey } },
+  });
+
+  if (isLoading) return <p>불러오는 중...</p>;
+  if (isError || !stats) return <p className="zrg-admin-error">통계를 불러오지 못했습니다.</p>;
+
+  const maxViews = Math.max(1, ...stats.daily.map((d) => d.views));
+
+  return (
+    <div className="zrg-admin-stats">
+      <div className="zrg-admin-stat-grid">
+        <StatCard label="오늘 방문자" value={stats.today.visitors} sub={`조회수 ${stats.today.views.toLocaleString("ko-KR")}`} />
+        <StatCard label="최근 7일 방문자" value={stats.last7Days.visitors} sub={`조회수 ${stats.last7Days.views.toLocaleString("ko-KR")}`} />
+        <StatCard label="최근 30일 방문자" value={stats.last30Days.visitors} sub={`조회수 ${stats.last30Days.views.toLocaleString("ko-KR")}`} />
+        <StatCard label="누적 방문자" value={stats.total.visitors} sub={`조회수 ${stats.total.views.toLocaleString("ko-KR")}`} />
+      </div>
+      <p className="zrg-admin-stats-note">
+        같은 방문자가 여러 번 접속해도 방문자 수는 브라우저별로 한 번만 집계되며, 자동 봇/크롤러
+        접속은 집계에서 제외됩니다.
+      </p>
+      {stats.daily.length > 0 && (
+        <div className="zrg-admin-stats-chart">
+          <h2>최근 14일 방문 추이</h2>
+          <div className="zrg-admin-chart-bars">
+            {stats.daily.map((d) => (
+              <div className="zrg-admin-chart-bar-wrap" key={d.date}>
+                <div
+                  className="zrg-admin-chart-bar"
+                  style={{ height: `${Math.max(4, (d.views / maxViews) * 100)}%` }}
+                  title={`${d.date}: 방문자 ${d.visitors} / 조회수 ${d.views}`}
+                />
+                <span className="zrg-admin-chart-label">{d.date.slice(5)}</span>
+              </div>
+            ))}
+          </div>
+          <div className="zrg-admin-table-wrap">
+            <table className="zrg-admin-table">
+              <thead>
+                <tr>
+                  <th>날짜</th>
+                  <th>방문자</th>
+                  <th>조회수</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[...stats.daily].reverse().map((d) => (
+                  <tr key={d.date}>
+                    <td>{d.date}</td>
+                    <td>{d.visitors.toLocaleString("ko-KR")}</td>
+                    <td>{d.views.toLocaleString("ko-KR")}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Dashboard({ adminKey, onLogout }: { adminKey: string; onLogout: () => void }) {
-  const [tab, setTab] = useState<"leads" | "settings">("leads");
+  const [tab, setTab] = useState<"leads" | "stats" | "settings">("leads");
 
   return (
     <div className="zrg-admin-dashboard">
@@ -240,6 +314,13 @@ function Dashboard({ adminKey, onLogout }: { adminKey: string; onLogout: () => v
         </button>
         <button
           type="button"
+          className={tab === "stats" ? "active" : ""}
+          onClick={() => setTab("stats")}
+        >
+          방문자 통계
+        </button>
+        <button
+          type="button"
           className={tab === "settings" ? "active" : ""}
           onClick={() => setTab("settings")}
         >
@@ -247,11 +328,9 @@ function Dashboard({ adminKey, onLogout }: { adminKey: string; onLogout: () => v
         </button>
       </nav>
       <section className="zrg-admin-content">
-        {tab === "leads" ? (
-          <LeadsTable adminKey={adminKey} />
-        ) : (
-          <TelegramSettings adminKey={adminKey} />
-        )}
+        {tab === "leads" && <LeadsTable adminKey={adminKey} />}
+        {tab === "stats" && <VisitorStats adminKey={adminKey} />}
+        {tab === "settings" && <TelegramSettings adminKey={adminKey} />}
       </section>
     </div>
   );

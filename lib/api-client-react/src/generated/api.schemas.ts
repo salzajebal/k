@@ -64,3 +64,33 @@ export interface AdminSettingsUpdate {
   telegramBotToken?: string | null;
 }
 
+export interface TrackPageViewInput {
+  /** @minLength 1 */
+  visitorId: string;
+  /** @minLength 1 */
+  sessionId: string;
+  /** @minLength 1 */
+  path: string;
+  /** @nullable */
+  referrer?: string | null;
+}
+
+export interface StatsPeriod {
+  visitors: number;
+  views: number;
+}
+
+export interface StatsDailyEntry {
+  date: string;
+  visitors: number;
+  views: number;
+}
+
+export interface Stats {
+  today: StatsPeriod;
+  last7Days: StatsPeriod;
+  last30Days: StatsPeriod;
+  total: StatsPeriod;
+  daily: StatsDailyEntry[];
+}
+

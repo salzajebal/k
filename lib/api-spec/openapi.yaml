@@ -14,6 +14,8 @@ tags:
     description: Consultation lead operations
   - name: admin
     description: Admin authentication and settings
+  - name: analytics
+    description: Visitor tracking and statistics
 paths:
   /healthz:
     get:
@@ -165,6 +167,44 @@ paths:
           description: No bot token saved, or no group chat could be detected
         "401":
           description: Unauthorized
+  /track:
+    post:
+      operationId: trackPageView
+      tags: [analytics]
+      summary: Record a page view
+      description: >-
+        Public endpoint called once per visitor session to record a page view for
+        visitor statistics. Duplicate calls for the same session are ignored.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TrackPageViewInput"
+      responses:
+        "204":
+          description: Recorded (or ignored as duplicate/bot)
+  /stats:
+    get:
+      operationId: getStats
+      tags: [analytics]
+      summary: Get visitor statistics
+      description: Admin-only endpoint returning visitor counts, requires the X-Admin-Key header
+      parameters:
+        - name: X-Admin-Key
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Stats"
+        "401":
+          description: Unauthorized
 components:
   schemas:
     HealthStatus:
@@ -256,4 +296,66 @@ components:
       properties:
         telegramBotToken:
           type: ["string", "null"]
+    TrackPageViewInput:
+      type: object
+      properties:
+        visitorId:
+          type: string
+          minLength: 1
+        sessionId:
+          type: string
+          minLength: 1
+        path:
+          type: string
+          minLength: 1
+        referrer:
+          type: ["string", "null"]
+      required:
+        - visitorId
+        - sessionId
+        - path
+    StatsPeriod:
+      type: object
+      properties:
+        visitors:
+          type: integer
+        views:
+          type: integer
+      required:
+        - visitors
+        - views
+    StatsDailyEntry:
+      type: object
+      properties:
+        date:
+          type: string
+        visitors:
+          type: integer
+        views:
+          type: integer
+      required:
+        - date
+        - visitors
+        - views
+    Stats:
+      type: object
+      properties:
+        today:
+          $ref: "#/components/schemas/StatsPeriod"
+        last7Days:
+          $ref: "#/components/schemas/StatsPeriod"
+        last30Days:
+          $ref: "#/components/schemas/StatsPeriod"
+        total:
+          $ref: "#/components/schemas/StatsPeriod"
+        daily:
+          type: array
+          items:
+            $ref: "#/components/schemas/StatsDailyEntry"
+      required:
+        - today
+        - last7Days
+        - last30Days
+        - total
+        - daily
 

@@ -134,3 +134,55 @@ export const DetectTelegramChatResponse = zod.object({
 })
 
 
+/**
+ * Public endpoint called once per visitor session to record a page view for visitor statistics. Duplicate calls for the same session are ignored.
+ * @summary Record a page view
+ */
+
+
+
+
+
+export const TrackPageViewBody = zod.object({
+  "visitorId": zod.string().min(1),
+  "sessionId": zod.string().min(1),
+  "path": zod.string().min(1),
+  "referrer": zod.string().nullish()
+})
+
+export const TrackPageViewResponse = zod.void()
+
+
+/**
+ * Admin-only endpoint returning visitor counts, requires the X-Admin-Key header
+ * @summary Get visitor statistics
+ */
+export const GetStatsHeader = zod.object({
+  "X-Admin-Key": zod.string()
+})
+
+export const GetStatsResponse = zod.object({
+  "today": zod.object({
+  "visitors": zod.number(),
+  "views": zod.number()
+}),
+  "last7Days": zod.object({
+  "visitors": zod.number(),
+  "views": zod.number()
+}),
+  "last30Days": zod.object({
+  "visitors": zod.number(),
+  "views": zod.number()
+}),
+  "total": zod.object({
+  "visitors": zod.number(),
+  "views": zod.number()
+}),
+  "daily": zod.array(zod.object({
+  "date": zod.string(),
+  "visitors": zod.number(),
+  "views": zod.number()
+}))
+})
+
+

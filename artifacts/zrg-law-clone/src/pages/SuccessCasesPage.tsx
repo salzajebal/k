@@ -2,10 +2,12 @@ import { Link } from "wouter";
 import { successCases } from "@/data/content";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import { useVisitorTracking } from "@/lib/useVisitorTracking";
 
 const img = (name: string) => `${import.meta.env.BASE_URL}images/${name}`;
 
 export default function SuccessCasesPage() {
+  useVisitorTracking();
   return (
     <div className="zrg-app">
       <Header />

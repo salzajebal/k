@@ -13,3 +13,7 @@ export * from './adminSettingsUpdate';
 export * from './healthStatus';
 export * from './lead';
 export * from './leadInput';
+export * from './stats';
+export * from './statsDailyEntry';
+export * from './statsPeriod';
+export * from './trackPageViewInput';

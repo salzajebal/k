@@ -10,8 +10,10 @@ import LeadForm from "@/components/sections/LeadForm";
 import Footer from "@/components/sections/Footer";
 import AdminPage from "@/pages/Admin";
 import SuccessCasesPage from "@/pages/SuccessCasesPage";
+import { useVisitorTracking } from "@/lib/useVisitorTracking";
 
 function HomePage() {
+  useVisitorTracking();
   return (
     <div className="zrg-app">
       <Header />
