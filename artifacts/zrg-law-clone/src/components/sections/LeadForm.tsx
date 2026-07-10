@@ -1,6 +1,5 @@
 import { useState, type FormEvent } from "react";
 import { useCreateLead } from "@workspace/api-client-react";
-import { PHONE } from "@/data/content";
 
 interface FormState {
   name: string;
@@ -186,10 +185,6 @@ export default function LeadForm() {
             <button type="submit" className="zrg-leadform-submit" disabled={status === "submitting"}>
               {status === "submitting" ? "전송 중..." : "무료 진단 신청하기"}
             </button>
-
-            <p className="zrg-leadform-phone">
-              급하신가요? 바로 전화 상담: <a href={`tel:${PHONE}`}>{PHONE}</a>
-            </p>
           </form>
         )}
       </div>
