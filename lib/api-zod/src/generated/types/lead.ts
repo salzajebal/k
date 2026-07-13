@@ -18,5 +18,7 @@ export interface Lead {
   assets?: string | null;
   /** @nullable */
   income?: string | null;
+  /** @nullable */
+  preferredTime?: string | null;
   createdAt: Date;
 }

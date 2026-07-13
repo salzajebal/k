@@ -17,6 +17,7 @@ async function notifyTelegram(lead: {
   securedDebt?: string | null;
   assets?: string | null;
   income?: string | null;
+  preferredTime?: string | null;
 }): Promise<void> {
   const [settings] = await db.select().from(appSettingsTable).limit(1);
   const token = settings?.telegramBotToken;
@@ -31,6 +32,7 @@ async function notifyTelegram(lead: {
     lead.securedDebt ? `담보채무: ${lead.securedDebt}` : null,
     lead.assets ? `재산: ${lead.assets}` : null,
     lead.income ? `월소득: ${lead.income}` : null,
+    lead.preferredTime ? `상담 선호 시간대: ${lead.preferredTime}` : null,
   ].filter((line): line is string => Boolean(line));
 
   try {

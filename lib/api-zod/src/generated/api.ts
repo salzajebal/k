@@ -31,7 +31,8 @@ export const CreateLeadBody = zod.object({
   "creditDebt": zod.string().nullish(),
   "securedDebt": zod.string().nullish(),
   "assets": zod.string().nullish(),
-  "income": zod.string().nullish()
+  "income": zod.string().nullish(),
+  "preferredTime": zod.string().nullish()
 })
 
 export const CreateLeadResponse = zod.object({
@@ -42,6 +43,7 @@ export const CreateLeadResponse = zod.object({
   "securedDebt": zod.string().nullish(),
   "assets": zod.string().nullish(),
   "income": zod.string().nullish(),
+  "preferredTime": zod.string().nullish(),
   "createdAt": zod.coerce.date()
 })
 
@@ -62,6 +64,7 @@ export const ListLeadsResponseItem = zod.object({
   "securedDebt": zod.string().nullish(),
   "assets": zod.string().nullish(),
   "income": zod.string().nullish(),
+  "preferredTime": zod.string().nullish(),
   "createdAt": zod.coerce.date()
 })
 export const ListLeadsResponse = zod.array(ListLeadsResponseItem)

@@ -231,6 +231,8 @@ components:
           type: ["string", "null"]
         income:
           type: ["string", "null"]
+        preferredTime:
+          type: ["string", "null"]
       required:
         - name
         - phone
@@ -250,6 +252,8 @@ components:
         assets:
           type: ["string", "null"]
         income:
+          type: ["string", "null"]
+        preferredTime:
           type: ["string", "null"]
         createdAt:
           type: string

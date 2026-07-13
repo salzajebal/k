@@ -1,6 +1,14 @@
 import { useState, type FormEvent } from "react";
 import { useCreateLead } from "@workspace/api-client-react";
 
+const TIME_OPTIONS = [
+  "언제든 상관없음",
+  "오전상담 선호",
+  "오후 1~3시",
+  "오후 3~6시",
+  "저녁 시간대",
+];
+
 interface FormState {
   name: string;
   phone: string;
@@ -8,6 +16,7 @@ interface FormState {
   securedDebt: string;
   assets: string;
   income: string;
+  preferredTime: string;
   consent: boolean;
 }
 
@@ -18,6 +27,7 @@ const initialState: FormState = {
   securedDebt: "",
   assets: "",
   income: "",
+  preferredTime: "",
   consent: false,
 };
 
@@ -50,6 +60,7 @@ export default function LeadForm() {
           securedDebt: form.securedDebt || null,
           assets: form.assets || null,
           income: form.income || null,
+          preferredTime: form.preferredTime || null,
         },
       },
       {
@@ -160,6 +171,21 @@ export default function LeadForm() {
                   onChange={(e) => update("income", e.target.value)}
                   placeholder="예: 250만원"
                 />
+              </label>
+            </div>
+
+            <div className="zrg-leadform-row zrg-leadform-row--full">
+              <label>
+                상담 가능 시간대
+                <select
+                  value={form.preferredTime}
+                  onChange={(e) => update("preferredTime", e.target.value)}
+                >
+                  <option value="">선택해주세요 (선택사항)</option>
+                  {TIME_OPTIONS.map((opt) => (
+                    <option key={opt} value={opt}>{opt}</option>
+                  ))}
+                </select>
               </label>
             </div>
 

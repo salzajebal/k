@@ -96,6 +96,7 @@ function LeadsTable({ adminKey }: { adminKey: string }) {
               <th>담보채무</th>
               <th>재산</th>
               <th>월소득</th>
+              <th>상담 선호 시간대</th>
             </tr>
           </thead>
           <tbody>
@@ -108,6 +109,7 @@ function LeadsTable({ adminKey }: { adminKey: string }) {
                 <td>{lead.securedDebt ?? "-"}</td>
                 <td>{lead.assets ?? "-"}</td>
                 <td>{lead.income ?? "-"}</td>
+                <td>{lead.preferredTime ?? "-"}</td>
               </tr>
             ))}
           </tbody>

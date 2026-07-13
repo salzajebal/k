@@ -19,4 +19,6 @@ export interface LeadInput {
   assets?: string | null;
   /** @nullable */
   income?: string | null;
+  /** @nullable */
+  preferredTime?: string | null;
 }

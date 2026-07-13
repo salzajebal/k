@@ -10,6 +10,7 @@ export const leadsTable = pgTable("leads", {
   securedDebt: text("secured_debt"),
   assets: text("assets"),
   income: text("income"),
+  preferredTime: text("preferred_time"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 

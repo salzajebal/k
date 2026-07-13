@@ -22,6 +22,8 @@ export interface LeadInput {
   assets?: string | null;
   /** @nullable */
   income?: string | null;
+  /** @nullable */
+  preferredTime?: string | null;
 }
 
 export interface Lead {
@@ -36,6 +38,8 @@ export interface Lead {
   assets?: string | null;
   /** @nullable */
   income?: string | null;
+  /** @nullable */
+  preferredTime?: string | null;
   createdAt: string;
 }
 
