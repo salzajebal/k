@@ -201,6 +201,20 @@ button {
   padding: 0 24px;
 }
 
+.zrg-hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: clamp(12px, 1.2vw, 14px);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
 .zrg-hero-title {
   font-family: var(--zrg-font-kr);
   font-size: clamp(28px, 4.2vw, 52px);

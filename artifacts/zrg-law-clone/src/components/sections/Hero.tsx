@@ -32,6 +32,7 @@ export default function Hero() {
             style={{ backgroundImage: `url(${img(slide.image)})` }}
           >
             <div className="zrg-hero-textbox">
+              <div className="zrg-hero-badge">무료로 상담해드립니다</div>
               <div className="zrg-hero-title">
                 {slide.title.split("\n").map((line, i) => (
                   <span key={i}>
