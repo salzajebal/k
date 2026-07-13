@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Route, Switch } from "wouter";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
@@ -11,14 +12,17 @@ import Footer from "@/components/sections/Footer";
 import AdminPage from "@/pages/Admin";
 import SuccessCasesPage from "@/pages/SuccessCasesPage";
 import { useVisitorTracking } from "@/lib/useVisitorTracking";
+import LeadFormModal from "@/components/LeadFormModal";
 
 function HomePage() {
   useVisitorTracking();
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <div className="zrg-app">
+      <LeadFormModal open={modalOpen} onClose={() => setModalOpen(false)} />
       <Header />
       <main>
-        <Hero />
+        <Hero onOpenConsult={() => setModalOpen(true)} />
         <Lawyers />
         <YoutubeSection />
         <SuccessCases />

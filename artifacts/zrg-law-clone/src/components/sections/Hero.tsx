@@ -4,7 +4,7 @@ import { heroSlides } from "@/data/content";
 const img = (name: string) => `${import.meta.env.BASE_URL}images/${name}`;
 const SLIDE_DURATION = 6000;
 
-export default function Hero() {
+export default function Hero({ onOpenConsult }: { onOpenConsult?: () => void }) {
   const [current, setCurrent] = useState(0);
   const timerRef = useRef<number | null>(null);
 
@@ -49,6 +49,11 @@ export default function Hero() {
                   </span>
                 ))}
               </div>
+              {onOpenConsult && (
+                <button type="button" className="zrg-hero-cta" onClick={onOpenConsult}>
+                  무료 상담 신청하기
+                </button>
+              )}
             </div>
           </div>
         ))}
