@@ -1,0 +1,23 @@
+heaminsac.com {
+	handle /api/* {
+		reverse_proxy api:5000
+	}
+	handle {
+		root * /srv
+		try_files {path} /index.html
+		file_server
+	}
+	encode zstd gzip
+}
+
+http://187.53.141.236 {
+	handle /api/* {
+		reverse_proxy api:5000
+	}
+	handle {
+		root * /srv
+		try_files {path} /index.html
+		file_server
+	}
+	encode zstd gzip
+}

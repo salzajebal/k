@@ -1,4 +1,4 @@
-modules = ["nodejs-24", "python-3.11"]
+modules = ["nodejs-24", "python-3.11", "postgresql-16"]
 
 [deployment]
 router = "application"
@@ -26,4 +26,3 @@ channel = "stable-25_05"
 
 [userenv.shared]
 ADMIN_USERNAME = "admin"
-ADMIN_PASSWORD = "ncjdkashw098!@"
